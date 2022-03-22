@@ -5,3 +5,11 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+Faker::Config.locale = 'fr'
+
+5.times do 
+
+firm = Firm.create(name: Faker::Ancient.god , email: Faker::Internet.email , address: Faker::Address.street_address , 
+     phone_number: Faker::PhoneNumber.cell_phone_in_e164)
+
+end

@@ -13,3 +13,6 @@
  *= require_tree .
  *= require_self
  */
+.nav{
+  background-color: rgb(180, 26, 26);
+}
