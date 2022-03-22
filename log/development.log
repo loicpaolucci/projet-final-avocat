@@ -308,3 +308,34 @@ Processing by Rails::WelcomeController#index as HTML
 Completed 200 OK in 81ms (Views: 41.8ms | ActiveRecord: 0.0ms | Allocations: 6422)
 
 
+Started GET "/" for 127.0.0.1 at 2022-03-22 16:28:56 +0100
+Processing by PrincipalController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering principal/index.html.erb within layouts/application
+  Rendered principal/index.html.erb within layouts/application (Duration: 17.0ms | Allocations: 123)
+  Rendered layout layouts/application.html.erb (Duration: 341.6ms | Allocations: 38445)
+Completed 200 OK in 355ms (Views: 353.5ms | Allocations: 39422)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-22 16:34:23 +0100
+Processing by PrincipalController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering principal/index.html.erb within layouts/application
+  Rendered application/_nav.html.erb (Duration: 106.4ms | Allocations: 31270)
+  Rendered application/_landing.html.erb (Duration: 109.7ms | Allocations: 31573)
+  Rendered principal/index.html.erb within layouts/application (Duration: 112.9ms | Allocations: 31895)
+  Rendered layout layouts/application.html.erb (Duration: 124.1ms | Allocations: 34982)
+Completed 200 OK in 145ms (Views: 143.4ms | Allocations: 35902)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-22 16:34:43 +0100
+Processing by PrincipalController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering principal/index.html.erb within layouts/application
+  Rendered application/_nav.html.erb (Duration: 1.5ms | Allocations: 729)
+  Rendered application/_landing.html.erb (Duration: 1.7ms | Allocations: 805)
+  Rendered principal/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 888)
+  Rendered layout layouts/application.html.erb (Duration: 14.5ms | Allocations: 9918)
+Completed 200 OK in 16ms (Views: 15.4ms | Allocations: 10176)
+
+
