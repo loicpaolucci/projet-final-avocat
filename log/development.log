@@ -140,3 +140,163 @@ Processing by Devise::SessionsController#new as HTML
 Completed 200 OK in 826ms (Views: 803.0ms | ActiveRecord: 5.2ms | Allocations: 1073390)
 
 
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFirm Create (3.1ms)[0m  [1m[32mINSERT INTO "firms" ("name", "rating", "address", "phone_number", "email", "departement_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Ares"], ["rating", nil], ["address", nil], ["phone_number", nil], ["email", nil], ["departement_id", nil], ["created_at", "2022-03-22 13:58:44.957684"], ["updated_at", "2022-03-22 13:58:44.957684"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFirm Create (0.2ms)[0m  [1m[32mINSERT INTO "firms" ("name", "rating", "address", "phone_number", "email", "departement_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Apollo"], ["rating", nil], ["address", nil], ["phone_number", nil], ["email", nil], ["departement_id", nil], ["created_at", "2022-03-22 13:58:44.963016"], ["updated_at", "2022-03-22 13:58:44.963016"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFirm Create (0.2ms)[0m  [1m[32mINSERT INTO "firms" ("name", "rating", "address", "phone_number", "email", "departement_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Aphrodite"], ["rating", nil], ["address", nil], ["phone_number", nil], ["email", nil], ["departement_id", nil], ["created_at", "2022-03-22 13:58:44.964754"], ["updated_at", "2022-03-22 13:58:44.964754"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFirm Create (0.2ms)[0m  [1m[32mINSERT INTO "firms" ("name", "rating", "address", "phone_number", "email", "departement_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Dionysus"], ["rating", nil], ["address", nil], ["phone_number", nil], ["email", nil], ["departement_id", nil], ["created_at", "2022-03-22 13:58:44.966301"], ["updated_at", "2022-03-22 13:58:44.966301"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFirm Create (0.1ms)[0m  [1m[32mINSERT INTO "firms" ("name", "rating", "address", "phone_number", "email", "departement_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Poseidon"], ["rating", nil], ["address", nil], ["phone_number", nil], ["email", nil], ["departement_id", nil], ["created_at", "2022-03-22 13:58:44.967961"], ["updated_at", "2022-03-22 13:58:44.967961"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mFirm Load (0.7ms)[0m  [1m[34mSELECT "firms".* FROM "firms"[0m
+  [1m[36mFirm Load (0.6ms)[0m  [1m[34mSELECT "firms".* FROM "firms"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFirm Destroy (0.4ms)[0m  [1m[31mDELETE FROM "firms" WHERE "firms"."id" = $1[0m  [["id", 1]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFirm Destroy (0.1ms)[0m  [1m[31mDELETE FROM "firms" WHERE "firms"."id" = $1[0m  [["id", 2]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFirm Destroy (0.1ms)[0m  [1m[31mDELETE FROM "firms" WHERE "firms"."id" = $1[0m  [["id", 3]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFirm Destroy (0.2ms)[0m  [1m[31mDELETE FROM "firms" WHERE "firms"."id" = $1[0m  [["id", 4]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFirm Destroy (0.1ms)[0m  [1m[31mDELETE FROM "firms" WHERE "firms"."id" = $1[0m  [["id", 5]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mFirm Load (0.5ms)[0m  [1m[34mSELECT "firms".* FROM "firms"[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFirm Create (0.5ms)[0m  [1m[32mINSERT INTO "firms" ("name", "rating", "address", "phone_number", "email", "departement_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Demeter"], ["rating", nil], ["address", "Suite 499 79764 Tyler Drive, East Jerrellberg, OR 52645"], ["phone_number", "en-FR"], ["email", "diane@zulauf.net"], ["departement_id", nil], ["created_at", "2022-03-22 14:13:49.595579"], ["updated_at", "2022-03-22 14:13:49.595579"]]
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFirm Create (0.4ms)[0m  [1m[32mINSERT INTO "firms" ("name", "rating", "address", "phone_number", "email", "departement_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Athena"], ["rating", nil], ["address", "Suite 423 944 Kertzmann Fork, Wildermanville, HI 98410"], ["phone_number", "(980) 166-4606 x410"], ["email", "noah_jones@kuphal.name"], ["departement_id", nil], ["created_at", "2022-03-22 14:16:57.646635"], ["updated_at", "2022-03-22 14:16:57.646635"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFirm Create (0.3ms)[0m  [1m[32mINSERT INTO "firms" ("name", "rating", "address", "phone_number", "email", "departement_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Hephaestus"], ["rating", nil], ["address", "Apt. 480 88603 Ela Spur, Lake Margaritoburgh, NY 45735"], ["phone_number", "1-917-340-8864 x8807"], ["email", "virgina_stroman@ondricka-reichel.biz"], ["departement_id", nil], ["created_at", "2022-03-22 14:16:57.650583"], ["updated_at", "2022-03-22 14:16:57.650583"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFirm Create (0.3ms)[0m  [1m[32mINSERT INTO "firms" ("name", "rating", "address", "phone_number", "email", "departement_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Poseidon"], ["rating", nil], ["address", "4103 Borer Hollow, New Horacio, RI 64253-7512"], ["phone_number", "329-169-4481 x372"], ["email", "todd.brown@hegmann.io"], ["departement_id", nil], ["created_at", "2022-03-22 14:16:57.653266"], ["updated_at", "2022-03-22 14:16:57.653266"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFirm Create (0.2ms)[0m  [1m[32mINSERT INTO "firms" ("name", "rating", "address", "phone_number", "email", "departement_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Hestia"], ["rating", nil], ["address", "39047 Graham Way, Boton, KS 82871"], ["phone_number", "(636) 802-2983 x360"], ["email", "pamella@huel.biz"], ["departement_id", nil], ["created_at", "2022-03-22 14:16:57.655885"], ["updated_at", "2022-03-22 14:16:57.655885"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFirm Create (0.2ms)[0m  [1m[32mINSERT INTO "firms" ("name", "rating", "address", "phone_number", "email", "departement_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Apollo"], ["rating", nil], ["address", "5123 Leeann Stream, Ziemeshire, HI 06966"], ["phone_number", "1-619-753-0562 x149"], ["email", "xavier.ondricka@lynch-stroman.io"], ["departement_id", nil], ["created_at", "2022-03-22 14:16:57.658387"], ["updated_at", "2022-03-22 14:16:57.658387"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mFirm Load (0.6ms)[0m  [1m[34mSELECT "firms".* FROM "firms" ORDER BY "firms"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mFirm Load (0.5ms)[0m  [1m[34mSELECT "firms".* FROM "firms"[0m
+  [1m[36mFirm Load (0.5ms)[0m  [1m[34mSELECT "firms".* FROM "firms"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFirm Destroy (0.3ms)[0m  [1m[31mDELETE FROM "firms" WHERE "firms"."id" = $1[0m  [["id", 6]]
+  [1m[36mTRANSACTION (4.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFirm Destroy (0.2ms)[0m  [1m[31mDELETE FROM "firms" WHERE "firms"."id" = $1[0m  [["id", 7]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFirm Destroy (0.1ms)[0m  [1m[31mDELETE FROM "firms" WHERE "firms"."id" = $1[0m  [["id", 8]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFirm Destroy (0.2ms)[0m  [1m[31mDELETE FROM "firms" WHERE "firms"."id" = $1[0m  [["id", 9]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFirm Destroy (0.2ms)[0m  [1m[31mDELETE FROM "firms" WHERE "firms"."id" = $1[0m  [["id", 10]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFirm Destroy (0.1ms)[0m  [1m[31mDELETE FROM "firms" WHERE "firms"."id" = $1[0m  [["id", 11]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mFirm Load (0.5ms)[0m  [1m[34mSELECT "firms".* FROM "firms"[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFirm Create (0.4ms)[0m  [1m[32mINSERT INTO "firms" ("name", "rating", "address", "phone_number", "email", "departement_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Hestia"], ["rating", nil], ["address", "481 Zulauf Stravenue, East Avelinatown, WY 84031"], ["phone_number", "+24214151324464"], ["email", "torrie.crooks@king-von.org"], ["departement_id", nil], ["created_at", "2022-03-22 14:31:40.512464"], ["updated_at", "2022-03-22 14:31:40.512464"]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFirm Create (0.2ms)[0m  [1m[32mINSERT INTO "firms" ("name", "rating", "address", "phone_number", "email", "departement_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Poseidon"], ["rating", nil], ["address", "Apt. 684 687 Hickle Vista, Pourosberg, NH 80167"], ["phone_number", "+80916514817602"], ["email", "chanel.wiza@klein-ziemann.name"], ["departement_id", nil], ["created_at", "2022-03-22 14:31:40.516632"], ["updated_at", "2022-03-22 14:31:40.516632"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFirm Create (0.2ms)[0m  [1m[32mINSERT INTO "firms" ("name", "rating", "address", "phone_number", "email", "departement_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Hermes"], ["rating", nil], ["address", "1565 Cheryl Oval, East Royborough, MI 44925"], ["phone_number", "+26317149430212"], ["email", "salvador.hilpert@kuhlman.com"], ["departement_id", nil], ["created_at", "2022-03-22 14:31:40.519297"], ["updated_at", "2022-03-22 14:31:40.519297"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFirm Create (0.2ms)[0m  [1m[32mINSERT INTO "firms" ("name", "rating", "address", "phone_number", "email", "departement_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Ares"], ["rating", nil], ["address", "Suite 771 37406 Feeney Ramp, East Corinnamouth, TX 93319-8268"], ["phone_number", "+5027922280231"], ["email", "erin@koch-corwin.com"], ["departement_id", nil], ["created_at", "2022-03-22 14:31:40.521910"], ["updated_at", "2022-03-22 14:31:40.521910"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFirm Create (0.1ms)[0m  [1m[32mINSERT INTO "firms" ("name", "rating", "address", "phone_number", "email", "departement_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Hestia"], ["rating", nil], ["address", "Apt. 519 308 Koss Springs, Port Kenton, IA 13969"], ["phone_number", "+85511019408024"], ["email", "brandon.reinger@kessler-pfeffer.info"], ["departement_id", nil], ["created_at", "2022-03-22 14:31:40.524377"], ["updated_at", "2022-03-22 14:31:40.524377"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mFirm Load (0.9ms)[0m  [1m[34mSELECT "firms".* FROM "firms"[0m
+  [1m[36mFirm Load (0.8ms)[0m  [1m[34mSELECT "firms".* FROM "firms"[0m
+  [1m[36mFirm Load (0.7ms)[0m  [1m[34mSELECT "firms".* FROM "firms"[0m
+  [1m[36mFirm Load (0.5ms)[0m  [1m[34mSELECT "firms".* FROM "firms"[0m
+  [1m[36mFirm Load (0.5ms)[0m  [1m[34mSELECT "firms".* FROM "firms"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFirm Destroy (0.4ms)[0m  [1m[31mDELETE FROM "firms" WHERE "firms"."id" = $1[0m  [["id", 12]]
+  [1m[36mTRANSACTION (5.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFirm Destroy (0.3ms)[0m  [1m[31mDELETE FROM "firms" WHERE "firms"."id" = $1[0m  [["id", 13]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFirm Destroy (0.2ms)[0m  [1m[31mDELETE FROM "firms" WHERE "firms"."id" = $1[0m  [["id", 14]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFirm Destroy (0.1ms)[0m  [1m[31mDELETE FROM "firms" WHERE "firms"."id" = $1[0m  [["id", 15]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFirm Destroy (0.1ms)[0m  [1m[31mDELETE FROM "firms" WHERE "firms"."id" = $1[0m  [["id", 16]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mFirm Load (0.3ms)[0m  [1m[34mSELECT "firms".* FROM "firms" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mFirm Load (0.2ms)[0m  [1m[34mSELECT "firms".* FROM "firms" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mFirm Load (0.6ms)[0m  [1m[34mSELECT "firms".* FROM "firms"[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFirm Create (0.4ms)[0m  [1m[32mINSERT INTO "firms" ("name", "rating", "address", "phone_number", "email", "departement_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Poseidon"], ["rating", nil], ["address", "West Carlynmouth"], ["phone_number", "+6219395548421"], ["email", "brenton@dicki.biz"], ["departement_id", nil], ["created_at", "2022-03-22 14:49:32.059548"], ["updated_at", "2022-03-22 14:49:32.059548"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFirm Create (0.1ms)[0m  [1m[32mINSERT INTO "firms" ("name", "rating", "address", "phone_number", "email", "departement_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Artemis"], ["rating", nil], ["address", "Jacobsontown"], ["phone_number", "+67413563989531"], ["email", "wilford@kulas.org"], ["departement_id", nil], ["created_at", "2022-03-22 14:49:32.062722"], ["updated_at", "2022-03-22 14:49:32.062722"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFirm Create (0.2ms)[0m  [1m[32mINSERT INTO "firms" ("name", "rating", "address", "phone_number", "email", "departement_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Hades"], ["rating", nil], ["address", "South Thanh"], ["phone_number", "+6908120255526"], ["email", "zaida_bauch@dicki.name"], ["departement_id", nil], ["created_at", "2022-03-22 14:49:32.065351"], ["updated_at", "2022-03-22 14:49:32.065351"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFirm Create (0.1ms)[0m  [1m[32mINSERT INTO "firms" ("name", "rating", "address", "phone_number", "email", "departement_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Dionysus"], ["rating", nil], ["address", "Peterstad"], ["phone_number", "+9758006414858"], ["email", "lala@fadel.org"], ["departement_id", nil], ["created_at", "2022-03-22 14:49:32.067829"], ["updated_at", "2022-03-22 14:49:32.067829"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFirm Create (0.1ms)[0m  [1m[32mINSERT INTO "firms" ("name", "rating", "address", "phone_number", "email", "departement_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Hephaestus"], ["rating", nil], ["address", "West Lara"], ["phone_number", "+6416598312260"], ["email", "shelby_ankunding@pfannerstill-ritchie.name"], ["departement_id", nil], ["created_at", "2022-03-22 14:49:32.070131"], ["updated_at", "2022-03-22 14:49:32.070131"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mFirm Load (0.9ms)[0m  [1m[34mSELECT "firms".* FROM "firms"[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mFirm Load (1.1ms)[0m  [1m[34mSELECT "firms".* FROM "firms"[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFirm Create (0.5ms)[0m  [1m[32mINSERT INTO "firms" ("name", "rating", "address", "phone_number", "email", "departement_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Apollo"], ["rating", nil], ["address", "45 Rue Louis Bleriot"], ["phone_number", "+330625521019"], ["email", "gaynell.bednar@beer.info"], ["departement_id", nil], ["created_at", "2022-03-22 15:12:20.560485"], ["updated_at", "2022-03-22 15:12:20.560485"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFirm Create (0.2ms)[0m  [1m[32mINSERT INTO "firms" ("name", "rating", "address", "phone_number", "email", "departement_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Hestia"], ["rating", nil], ["address", "156 Descente De Berlin Spandau"], ["phone_number", "+330786689382"], ["email", "raisa.olson@friesen.co"], ["departement_id", nil], ["created_at", "2022-03-22 15:12:20.564303"], ["updated_at", "2022-03-22 15:12:20.564303"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFirm Create (0.2ms)[0m  [1m[32mINSERT INTO "firms" ("name", "rating", "address", "phone_number", "email", "departement_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Hestia"], ["rating", nil], ["address", "8 Sentier Eugene"], ["phone_number", "+33651075155"], ["email", "celsa@bogisich.biz"], ["departement_id", nil], ["created_at", "2022-03-22 15:12:20.566437"], ["updated_at", "2022-03-22 15:12:20.566437"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFirm Create (0.2ms)[0m  [1m[32mINSERT INTO "firms" ("name", "rating", "address", "phone_number", "email", "departement_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Hermes"], ["rating", nil], ["address", "442 Sentier Olivier"], ["phone_number", "+330768896695"], ["email", "melisa.cormier@gleason.biz"], ["departement_id", nil], ["created_at", "2022-03-22 15:12:20.568473"], ["updated_at", "2022-03-22 15:12:20.568473"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFirm Create (0.2ms)[0m  [1m[32mINSERT INTO "firms" ("name", "rating", "address", "phone_number", "email", "departement_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Hera"], ["rating", nil], ["address", "8690 Esplanade Richard Wallace"], ["phone_number", "+330689112084"], ["email", "jonathon@kassulke.io"], ["departement_id", nil], ["created_at", "2022-03-22 15:12:20.570451"], ["updated_at", "2022-03-22 15:12:20.570451"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
