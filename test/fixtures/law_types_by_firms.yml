@@ -1,0 +1,25 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  administratif: false
+  constitutionnel: false
+  prive: false
+  civil: false
+  social: false
+  penal: false
+  commercial: false
+  judiciaire: false
+  administratif: false
+  administratif: false
+
+two:
+  administratif: false
+  constitutionnel: false
+  prive: false
+  civil: false
+  social: false
+  penal: false
+  commercial: false
+  judiciaire: false
+  administratif: false
+  administratif: false
