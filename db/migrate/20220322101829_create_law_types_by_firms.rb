@@ -9,8 +9,6 @@ class CreateLawTypesByFirms < ActiveRecord::Migration[7.0]
       t.boolean :penal
       t.boolean :commercial
       t.boolean :judiciaire
-      t.boolean :administratif
-      t.boolean :administratif
       t.belongs_to :firm, index: true
       t.belongs_to :lawyer, class_name: 'User', index: true
       

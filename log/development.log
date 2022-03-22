@@ -37,3 +37,106 @@ Migrating to CreateLawTypesByFirms (20220322101829)
   [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
 Migrating to CreateLawTypesByFirms (20220322101829)
   [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(6177048605562077355)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6177048605562077355)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateLawTypesByFirms (20220322101829)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE TABLE "law_types_by_firms" ("id" bigserial primary key, "administratif" boolean, "constitutionnel" boolean, "prive" boolean, "civil" boolean, "social" boolean, "penal" boolean, "commercial" boolean, "judiciaire" boolean, "firm_id" bigint, "lawyer_id" bigint, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE INDEX "index_law_types_by_firms_on_firm_id" ON "law_types_by_firms" ("firm_id")[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE INDEX "index_law_types_by_firms_on_lawyer_id" ON "law_types_by_firms" ("lawyer_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220322101829"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateComments (20220322101924)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.4ms)[0m  [1m[35mCREATE TABLE "comments" ("id" bigserial primary key, "content" character varying, "firm_id" bigint, "client_id" bigint, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE INDEX "index_comments_on_firm_id" ON "comments" ("firm_id")[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE INDEX "index_comments_on_client_id" ON "comments" ("client_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220322101924"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateAppointments (20220322102016)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE TABLE "appointments" ("id" bigserial primary key, "start_date" timestamp(6), "is_confirmed" boolean, "is_paid" boolean, "firm_id" bigint, "lawyer_id" bigint, "client_id" bigint, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE INDEX "index_appointments_on_firm_id" ON "appointments" ("firm_id")[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE INDEX "index_appointments_on_lawyer_id" ON "appointments" ("lawyer_id")[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE INDEX "index_appointments_on_client_id" ON "appointments" ("client_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220322102016"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(6177048605562077355)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2022-03-22 14:04:11 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/paolucciloic/.rvm/gems/ruby-2.7.4/gems/railties-7.0.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/paolucciloic/.rvm/gems/ruby-2.7.4/gems/railties-7.0.2.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.2ms | Allocations: 571)
+Completed 200 OK in 10ms (Views: 3.6ms | ActiveRecord: 0.0ms | Allocations: 5192)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-22 14:04:18 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/paolucciloic/.rvm/gems/ruby-2.7.4/gems/railties-7.0.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/paolucciloic/.rvm/gems/ruby-2.7.4/gems/railties-7.0.2.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 2.1ms | Allocations: 370)
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.0ms | Allocations: 1134)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-22 14:04:25 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/paolucciloic/.rvm/gems/ruby-2.7.4/gems/railties-7.0.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/paolucciloic/.rvm/gems/ruby-2.7.4/gems/railties-7.0.2.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.1ms | Allocations: 24)
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.0ms | Allocations: 234)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-22 14:41:21 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/paolucciloic/.rvm/gems/ruby-2.7.4/gems/railties-7.0.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/paolucciloic/.rvm/gems/ruby-2.7.4/gems/railties-7.0.2.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.7ms | Allocations: 571)
+Completed 200 OK in 5ms (Views: 2.0ms | ActiveRecord: 0.0ms | Allocations: 5189)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-22 14:41:26 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/paolucciloic/.rvm/gems/ruby-2.7.4/gems/railties-7.0.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/paolucciloic/.rvm/gems/ruby-2.7.4/gems/railties-7.0.2.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.1ms | Allocations: 370)
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 0.0ms | Allocations: 1134)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-22 14:41:52 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/paolucciloic/.rvm/gems/ruby-2.7.4/gems/railties-7.0.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/paolucciloic/.rvm/gems/ruby-2.7.4/gems/railties-7.0.2.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.1ms | Allocations: 24)
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 234)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-22 14:41:56 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/paolucciloic/.rvm/gems/ruby-2.7.4/gems/railties-7.0.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/paolucciloic/.rvm/gems/ruby-2.7.4/gems/railties-7.0.2.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.1ms | Allocations: 23)
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 228)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-22 14:42:58 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/paolucciloic/.rvm/gems/ruby-2.7.4/gems/railties-7.0.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/paolucciloic/.rvm/gems/ruby-2.7.4/gems/railties-7.0.2.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.7ms | Allocations: 370)
+Completed 200 OK in 6ms (Views: 3.9ms | ActiveRecord: 0.0ms | Allocations: 1133)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-22 14:43:03 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/paolucciloic/.rvm/gems/ruby-2.7.4/gems/railties-7.0.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/paolucciloic/.rvm/gems/ruby-2.7.4/gems/railties-7.0.2.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.1ms | Allocations: 23)
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 230)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-03-22 14:43:10 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.8ms | Allocations: 829)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 773.2ms | Allocations: 1016909)
+  Rendered layout layouts/application.html.erb (Duration: 801.0ms | Allocations: 1060324)
+Completed 200 OK in 826ms (Views: 803.0ms | ActiveRecord: 5.2ms | Allocations: 1073390)
+
+
