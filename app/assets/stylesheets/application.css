@@ -13,8 +13,15 @@
  *= require_tree .
  *= require_self
  */
-.nav{
-    background-color: aqua;
+ * {
+    margin : 0;
+    padding : 0;
+}
 
+.navbar {
+    border : 1px solid green;
+}
 
+.nav {
+    background-color: black;
 }
