@@ -301,3 +301,152 @@ Completed 200 OK in 826ms (Views: 803.0ms | ActiveRecord: 5.2ms | Allocations: 1
   [1m[36mFirm Create (0.2ms)[0m  [1m[32mINSERT INTO "firms" ("name", "rating", "address", "phone_number", "email", "departement_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Hera"], ["rating", nil], ["address", "8690 Esplanade Richard Wallace"], ["phone_number", "+330689112084"], ["email", "jonathon@kassulke.io"], ["departement_id", nil], ["created_at", "2022-03-22 15:12:20.570451"], ["updated_at", "2022-03-22 15:12:20.570451"]]
   [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
   [1m[36mFirm Load (0.7ms)[0m  [1m[34mSELECT "firms".* FROM "firms"[0m
+Started GET "/" for 127.0.0.1 at 2022-03-23 10:42:00 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/paolucciloic/.rvm/gems/ruby-2.7.4/gems/railties-7.0.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/paolucciloic/.rvm/gems/ruby-2.7.4/gems/railties-7.0.2.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.1ms | Allocations: 571)
+Completed 200 OK in 7ms (Views: 3.1ms | ActiveRecord: 0.0ms | Allocations: 5191)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-03-23 10:42:27 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.8ms | Allocations: 829)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 136.1ms | Allocations: 349368)
+  Rendered layout layouts/application.html.erb (Duration: 158.7ms | Allocations: 387084)
+Completed 200 OK in 184ms (Views: 160.7ms | ActiveRecord: 5.6ms | Allocations: 397582)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-23 11:24:35 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/paolucciloic/.rvm/gems/ruby-2.7.4/gems/railties-7.0.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/paolucciloic/.rvm/gems/ruby-2.7.4/gems/railties-7.0.2.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.2ms | Allocations: 571)
+Completed 200 OK in 8ms (Views: 3.2ms | ActiveRecord: 0.0ms | Allocations: 5191)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2022-03-23 11:25:02 +0100
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"lolo@yopmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (6.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "lolo@yopmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 28ms (ActiveRecord: 14.2ms | Allocations: 4415)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2022-03-23 11:25:07 +0100
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"lolo@yopmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "lolo@yopmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 4ms (ActiveRecord: 0.3ms | Allocations: 1341)
+
+
+Started GET "/users/password/new" for 127.0.0.1 at 2022-03-23 11:25:16 +0100
+Processing by Devise::PasswordsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/passwords/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.7ms | Allocations: 245)
+  Rendered devise/shared/_links.html.erb (Duration: 1.0ms | Allocations: 820)
+  Rendered devise/passwords/new.html.erb within layouts/application (Duration: 7.0ms | Allocations: 3370)
+  Rendered layout layouts/application.html.erb (Duration: 39.6ms | Allocations: 40176)
+Completed 200 OK in 52ms (Views: 41.3ms | ActiveRecord: 0.0ms | Allocations: 49047)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2022-03-23 11:25:20 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 82)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 4.2ms | Allocations: 1691)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 3927)
+Completed 200 OK in 12ms (Views: 9.9ms | ActiveRecord: 0.0ms | Allocations: 5074)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2022-03-23 12:08:48 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mCACHE ActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 1 pending migration:
+
+20220323110814_create_principals.rb
+
+
+):
+  
+activerecord (7.0.2.3) lib/active_record/migration.rb:627:in `check_pending!'
+activerecord (7.0.2.3) lib/active_record/migration.rb:592:in `block (2 levels) in call'
+activesupport (7.0.2.3) lib/active_support/file_update_checker.rb:83:in `execute'
+activerecord (7.0.2.3) lib/active_record/migration.rb:597:in `block in call'
+activerecord (7.0.2.3) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.2.3) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.2.3) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.2.3) lib/rails/rack/logger.rb:36:in `call_app'
+railties (7.0.2.3) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.2.3) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.2.3) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.2.3) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.2.3) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.2.3) lib/rails/engine.rb:530:in `call'
+puma (5.6.2) lib/puma/configuration.rb:252:in `call'
+puma (5.6.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.2) lib/puma/server.rb:441:in `process_client'
+puma (5.6.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6177048605562077355)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePrincipals (20220323110814)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (11.7ms)[0m  [1m[35mCREATE TABLE "principals" ("id" bigserial primary key, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220323110814"]]
+  [1m[36mTRANSACTION (3.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(6177048605562077355)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/users/sign_up" for 127.0.0.1 at 2022-03-23 12:09:10 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.4ms | Allocations: 245)
+  Rendered devise/shared/_links.html.erb (Duration: 0.7ms | Allocations: 657)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 102.9ms | Allocations: 349475)
+  Rendered layout layouts/application.html.erb (Duration: 122.4ms | Allocations: 386128)
+Completed 200 OK in 141ms (Views: 124.5ms | ActiveRecord: 7.0ms | Allocations: 399995)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-23 12:09:17 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/paolucciloic/.rvm/gems/ruby-2.7.4/gems/railties-7.0.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/paolucciloic/.rvm/gems/ruby-2.7.4/gems/railties-7.0.2.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.4ms | Allocations: 380)
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.0ms | Allocations: 1142)
+
+
