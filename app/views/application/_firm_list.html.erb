@@ -1,0 +1,7 @@
+<div class="container current-list">
+    <% Firm.all.each do |firm| %>
+        <% if firm.departement_id == zip_id %>
+            <p><%= firm.name %> <%= firm.rating %></p>
+        <% end %>
+    <% end %>
+</div>
