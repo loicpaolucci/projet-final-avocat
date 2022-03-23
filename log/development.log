@@ -1803,3 +1803,1105 @@ puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
 puma (3.12.6) lib/puma/server.rb:476:in `process_client'
 puma (3.12.6) lib/puma/server.rb:334:in `block in run'
 puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2022-03-23 19:11:46 +0100
+  [1m[35m (79.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.7.0/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+Processing by MenuController#index as HTML
+  Rendering menu/index.html.erb within layouts/application
+  Rendered application/_nav.html.erb (642.1ms)
+  Rendered application/_landing.html.erb (648.9ms)
+  Rendered menu/index.html.erb within layouts/application (661.2ms)
+Completed 200 OK in 733ms (Views: 729.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/menu/new" for 127.0.0.1 at 2022-03-23 19:11:55 +0100
+Processing by MenuController#new as JS
+  Rendering menu/new.js.erb
+  Rendered application/_nav.html.erb (1.8ms)
+  Rendered menu/new.js.erb (3.6ms)
+Completed 200 OK in 190ms (Views: 6.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-23 19:12:02 +0100
+Processing by MenuController#index as HTML
+  Rendering menu/index.html.erb within layouts/application
+  Rendered application/_nav.html.erb (2.9ms)
+  Rendered application/_landing.html.erb (4.9ms)
+  Rendered menu/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 34ms (Views: 33.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-23 19:16:22 +0100
+Processing by MenuController#index as HTML
+  Rendering menu/index.html.erb within layouts/application
+  Rendered application/_nav.html.erb (3.3ms)
+  Rendered application/_landing.html.erb (7.8ms)
+  Rendered menu/index.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 46ms (Views: 45.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/menu/new" for 127.0.0.1 at 2022-03-23 19:16:25 +0100
+Processing by MenuController#new as JS
+  Rendering menu/new.js.erb
+  Rendered application/_login.html.erb (303.5ms)
+  Rendered menu/new.js.erb (307.8ms)
+Completed 500 Internal Server Error in 317ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `resource' for #<#<Class:0x0000556efe341b48>:0x00007f10a4a6b358>
+Did you mean?  rescue):
+    1: 
+    2: <h2>Log in</h2><br>
+    3: 
+    4: <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    5:   <div class="field">
+    6:     <%= f.label :email %><br />
+    7:     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  
+app/views/application/_login.html.erb:4:in `_app_views_application__login_html_erb__3932568805780590195_19080'
+app/views/menu/new.js.erb:2:in `_app_views_menu_new_js_erb__2138562565455707866_19060'
+Started GET "/" for 127.0.0.1 at 2022-03-23 19:18:48 +0100
+Processing by MenuController#index as HTML
+  Rendering menu/index.html.erb within layouts/application
+  Rendered application/_nav.html.erb (5.4ms)
+  Rendered application/_landing.html.erb (10.4ms)
+  Rendered menu/index.html.erb within layouts/application (16.7ms)
+Completed 200 OK in 58ms (Views: 57.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/menu/new" for 127.0.0.1 at 2022-03-23 19:18:51 +0100
+Processing by MenuController#new as JS
+  Rendering menu/new.js.erb
+  Rendered application/_login_form.html.erb (354.3ms)
+  Rendered menu/new.js.erb (356.6ms)
+Completed 500 Internal Server Error in 364ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `resource' for #<#<Class:0x0000556efe341b48>:0x00007f10a428e8d8>
+Did you mean?  rescue):
+    1: <h2>Log in</h2>
+    2: 
+    3: <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    4:   <div class="form-inputs">
+    5:     <%= f.input :email,
+    6:                 required: false,
+  
+app/views/application/_login_form.html.erb:3:in `_app_views_application__login_form_html_erb___1996576808608107924_19560'
+app/views/menu/new.js.erb:2:in `_app_views_menu_new_js_erb__2138562565455707866_19540'
+Started GET "/menu/new" for 127.0.0.1 at 2022-03-23 19:18:54 +0100
+Processing by MenuController#new as JS
+  Rendering menu/new.js.erb
+  Rendered application/_login_form.html.erb (286.9ms)
+  Rendered menu/new.js.erb (290.3ms)
+Completed 500 Internal Server Error in 295ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `resource' for #<#<Class:0x0000556efe341b48>:0x00007f10a0038a38>
+Did you mean?  rescue):
+    1: <h2>Log in</h2>
+    2: 
+    3: <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    4:   <div class="form-inputs">
+    5:     <%= f.input :email,
+    6:                 required: false,
+  
+app/views/application/_login_form.html.erb:3:in `_app_views_application__login_form_html_erb___1996576808608107924_19820'
+app/views/menu/new.js.erb:2:in `_app_views_menu_new_js_erb__2138562565455707866_19800'
+Started GET "/" for 127.0.0.1 at 2022-03-23 19:19:30 +0100
+Processing by MenuController#index as HTML
+  Rendering menu/index.html.erb within layouts/application
+  Rendered application/_nav.html.erb (2.3ms)
+  Rendered application/_landing.html.erb (5.9ms)
+  Rendered menu/index.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 55ms (Views: 54.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/menu/new" for 127.0.0.1 at 2022-03-23 19:19:33 +0100
+Processing by MenuController#new as HTML
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-03-23 19:19:33 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (5281.6ms)
+Completed 200 OK in 5736ms (Views: 5311.2ms | ActiveRecord: 366.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-23 19:23:00 +0100
+Processing by MenuController#index as HTML
+  Rendering menu/index.html.erb within layouts/application
+  Rendered application/_nav.html.erb (1.9ms)
+  Rendered application/_landing.html.erb (3.5ms)
+  Rendered menu/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 73ms (Views: 72.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/menu/new" for 127.0.0.1 at 2022-03-23 19:23:01 +0100
+Processing by MenuController#new as JS
+  Rendering menu/new.js.erb
+  Rendered application/_login_form.html.erb (473.5ms)
+  Rendered menu/new.js.erb (477.6ms)
+Completed 500 Internal Server Error in 486ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `resource' for #<#<Class:0x0000556efe341b48>:0x00007f10a4bc0488>
+Did you mean?  rescue):
+    1: <h2>Log in</h2>
+    2: 
+    3: <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    4:   <div class="form-inputs">
+    5:     <%= f.input :email,
+    6:                 required: false,
+  
+app/views/application/_login_form.html.erb:3:in `_app_views_application__login_form_html_erb___1996576808608107924_20500'
+app/views/menu/new.js.erb:2:in `_app_views_menu_new_js_erb__2138562565455707866_20480'
+Started GET "/" for 127.0.0.1 at 2022-03-23 19:23:50 +0100
+Processing by MenuController#index as HTML
+  Rendering menu/index.html.erb within layouts/application
+  Rendered application/_nav.html.erb (3.0ms)
+  Rendered application/_landing.html.erb (5.2ms)
+  Rendered menu/index.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 35ms (Views: 33.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/menu/new" for 127.0.0.1 at 2022-03-23 19:23:51 +0100
+Processing by MenuController#new as JS
+  Rendering menu/new.js.erb
+  Rendered application/_login_form.html.erb (223.9ms)
+  Rendered menu/new.js.erb (226.0ms)
+Completed 500 Internal Server Error in 229ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `resource' for #<#<Class:0x0000556efe341b48>:0x00007f109c2229d8>
+Did you mean?  rescue):
+    1: <h2>Sign up</h2>
+    2: 
+    3: <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    4:   <%= f.error_notification %>
+    5: 
+    6:   <div class="form-inputs">
+  
+app/views/application/_login_form.html.erb:3:in `_app_views_application__login_form_html_erb___1996576808608107924_20880'
+app/views/menu/new.js.erb:2:in `_app_views_menu_new_js_erb__2138562565455707866_20860'
+Started GET "/menu/new" for 127.0.0.1 at 2022-03-23 19:23:53 +0100
+Processing by MenuController#new as JS
+  Rendering menu/new.js.erb
+  Rendered application/_login_form.html.erb (334.1ms)
+  Rendered menu/new.js.erb (336.7ms)
+Completed 500 Internal Server Error in 341ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `resource' for #<#<Class:0x0000556efe341b48>:0x00007f1088267628>
+Did you mean?  rescue):
+    1: <h2>Sign up</h2>
+    2: 
+    3: <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    4:   <%= f.error_notification %>
+    5: 
+    6:   <div class="form-inputs">
+  
+app/views/application/_login_form.html.erb:3:in `_app_views_application__login_form_html_erb___1996576808608107924_21140'
+app/views/menu/new.js.erb:2:in `_app_views_menu_new_js_erb__2138562565455707866_21120'
+Started GET "/menu/new" for 127.0.0.1 at 2022-03-23 19:24:02 +0100
+Processing by MenuController#new as JS
+  Rendering menu/new.js.erb
+  Rendered application/_login_form.html.erb (234.7ms)
+  Rendered menu/new.js.erb (236.3ms)
+Completed 500 Internal Server Error in 267ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `resource' for #<#<Class:0x0000556efe341b48>:0x00007f10a10e2eb0>
+Did you mean?  rescue):
+    1: <h2>Sign up</h2>
+    2: 
+    3: <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    4:   <%= f.error_notification %>
+    5: 
+    6:   <div class="form-inputs">
+  
+app/views/application/_login_form.html.erb:3:in `_app_views_application__login_form_html_erb___1996576808608107924_21380'
+app/views/menu/new.js.erb:2:in `_app_views_menu_new_js_erb__2138562565455707866_21360'
+Started GET "/" for 127.0.0.1 at 2022-03-23 19:26:09 +0100
+Processing by MenuController#index as HTML
+  Rendering menu/index.html.erb within layouts/application
+  Rendered application/_nav.html.erb (24.6ms)
+  Rendered application/_landing.html.erb (26.5ms)
+  Rendered menu/index.html.erb within layouts/application (29.1ms)
+Completed 200 OK in 352ms (Views: 350.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/menu/new" for 127.0.0.1 at 2022-03-23 19:26:11 +0100
+Processing by MenuController#new as JS
+  Rendering menu/new.js.erb
+  Rendered application/_login_form.html.erb (2.0ms)
+  Rendered menu/new.js.erb (3.8ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Could not find a valid mapping for 1):
+    1: <h2>Sign up</h2>
+    2: 
+    3: <%= form_with(registration_path(1)) do |f| %>
+    4:   <%= f.error_notification %>
+    5: 
+    6:   <div class="form-inputs">
+  
+app/views/application/_login_form.html.erb:3:in `_app_views_application__login_form_html_erb___1996576808608107924_21740'
+app/views/menu/new.js.erb:2:in `_app_views_menu_new_js_erb__2138562565455707866_21720'
+Started GET "/" for 127.0.0.1 at 2022-03-23 19:26:23 +0100
+Processing by MenuController#index as HTML
+  Rendering menu/index.html.erb within layouts/application
+  Rendered application/_nav.html.erb (6.1ms)
+  Rendered application/_landing.html.erb (8.5ms)
+  Rendered menu/index.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 41ms (Views: 39.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/menu/new" for 127.0.0.1 at 2022-03-23 19:26:25 +0100
+Processing by MenuController#new as JS
+  Rendering menu/new.js.erb
+  Rendered application/_login_form.html.erb (0.6ms)
+  Rendered menu/new.js.erb (3.8ms)
+Completed 200 OK in 9ms (Views: 6.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/test/1" for 127.0.0.1 at 2022-03-23 19:26:33 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/test/1"):
+  
+actionpack (5.2.7) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.7) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.7) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/test/1" for 127.0.0.1 at 2022-03-23 19:26:34 +0100
+Started GET "/test/1" for 127.0.0.1 at 2022-03-23 19:26:34 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/test/1"):
+  
+actionpack (5.2.7) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.7) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.7) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  
+ActionController::RoutingError (No route matches [GET] "/test/1"):
+  
+actionpack (5.2.7) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.7) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.7) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/test/1" for 127.0.0.1 at 2022-03-23 19:26:34 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/test/1"):
+  
+actionpack (5.2.7) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.7) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.7) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2022-03-23 19:26:39 +0100
+Processing by MenuController#index as HTML
+  Rendering menu/index.html.erb within layouts/application
+  Rendered application/_nav.html.erb (5.8ms)
+  Rendered application/_landing.html.erb (8.8ms)
+  Rendered menu/index.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 64ms (Views: 62.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-23 19:27:17 +0100
+Processing by MenuController#index as HTML
+  Rendering menu/index.html.erb within layouts/application
+  Rendered application/_nav.html.erb (5.3ms)
+  Rendered application/_landing.html.erb (7.7ms)
+  Rendered menu/index.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 44ms (Views: 43.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/menu/new" for 127.0.0.1 at 2022-03-23 19:28:03 +0100
+Processing by MenuController#new as JS
+  Rendering menu/new.js.erb
+  Rendered application/_login_form.html.erb (0.8ms)
+  Rendered menu/new.js.erb (3.4ms)
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-23 19:29:14 +0100
+Processing by MenuController#index as HTML
+  Rendering menu/index.html.erb within layouts/application
+  Rendered application/_nav.html.erb (4.6ms)
+  Rendered application/_landing.html.erb (10.4ms)
+  Rendered menu/index.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 61ms (Views: 60.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-23 19:29:16 +0100
+Processing by MenuController#index as HTML
+  Rendering menu/index.html.erb within layouts/application
+  Rendered application/_nav.html.erb (3.6ms)
+  Rendered application/_landing.html.erb (6.7ms)
+  Rendered menu/index.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 48ms (Views: 44.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/menu/new" for 127.0.0.1 at 2022-03-23 19:29:18 +0100
+Processing by MenuController#new as JS
+  Rendering menu/new.js.erb
+  Rendered application/_login_form.html.erb (292.5ms)
+  Rendered menu/new.js.erb (295.6ms)
+Completed 500 Internal Server Error in 302ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `resource' for #<#<Class:0x0000556efe341b48>:0x00007f10a5d42238>
+Did you mean?  rescue):
+    1: <h2>Log in</h2>
+    2: 
+    3: <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    4:   <div class="form-inputs">
+    5:     <%= f.input :email,
+    6:                 required: false,
+  
+app/views/application/_login_form.html.erb:3:in `_app_views_application__login_form_html_erb___1996576808608107924_24400'
+app/views/menu/new.js.erb:2:in `_app_views_menu_new_js_erb__2138562565455707866_24380'
+Started GET "/menu/new" for 127.0.0.1 at 2022-03-23 19:29:20 +0100
+Processing by MenuController#new as JS
+  Rendering menu/new.js.erb
+  Rendered application/_login_form.html.erb (232.8ms)
+  Rendered menu/new.js.erb (237.5ms)
+Completed 500 Internal Server Error in 243ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `resource' for #<#<Class:0x0000556efe341b48>:0x00007f10b829b4c0>
+Did you mean?  rescue):
+    1: <h2>Log in</h2>
+    2: 
+    3: <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    4:   <div class="form-inputs">
+    5:     <%= f.input :email,
+    6:                 required: false,
+  
+app/views/application/_login_form.html.erb:3:in `_app_views_application__login_form_html_erb___1996576808608107924_24660'
+app/views/menu/new.js.erb:2:in `_app_views_menu_new_js_erb__2138562565455707866_24640'
+Started GET "/" for 127.0.0.1 at 2022-03-23 19:29:38 +0100
+Processing by MenuController#index as HTML
+  Rendering menu/index.html.erb within layouts/application
+  Rendered application/_nav.html.erb (2.4ms)
+  Rendered application/_landing.html.erb (5.2ms)
+  Rendered menu/index.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 46ms (Views: 41.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/menu/new" for 127.0.0.1 at 2022-03-23 19:29:39 +0100
+Processing by MenuController#new as JS
+  Rendering menu/new.js.erb
+  Rendered application/_login_form.html.erb (229.2ms)
+  Rendered menu/new.js.erb (232.0ms)
+Completed 500 Internal Server Error in 236ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `resource' for #<#<Class:0x0000556efe341b48>:0x00007f10a13ead38>
+Did you mean?  rescue):
+    1: <h2>Log in</h2>
+    2: 
+    3: <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    4:     <div class="form-inputs">
+    5:     <%= f.input :email,
+    6:                 required: false,
+  
+app/views/application/_login_form.html.erb:3:in `_app_views_application__login_form_html_erb___1996576808608107924_25020'
+app/views/menu/new.js.erb:2:in `_app_views_menu_new_js_erb__2138562565455707866_25000'
+Started GET "/" for 127.0.0.1 at 2022-03-23 19:29:48 +0100
+Processing by MenuController#index as HTML
+  Rendering menu/index.html.erb within layouts/application
+  Rendered application/_nav.html.erb (3.1ms)
+  Rendered application/_landing.html.erb (5.6ms)
+  Rendered menu/index.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 41ms (Views: 40.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/menu/new" for 127.0.0.1 at 2022-03-23 19:29:50 +0100
+Processing by MenuController#new as JS
+  Rendering menu/new.js.erb
+  Rendered application/_login_form.html.erb (364.6ms)
+  Rendered menu/new.js.erb (366.6ms)
+Completed 500 Internal Server Error in 371ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `resource' for #<#<Class:0x0000556efe341b48>:0x00007f10a2024388>
+Did you mean?  rescue):
+    1: <h2>Log in</h2>
+    2: 
+    3: <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    4:     
+    5: <% end %>
+    6: 
+  
+app/views/application/_login_form.html.erb:3:in `_app_views_application__login_form_html_erb___1996576808608107924_25380'
+app/views/menu/new.js.erb:2:in `_app_views_menu_new_js_erb__2138562565455707866_25360'
+Started GET "/" for 127.0.0.1 at 2022-03-23 19:29:56 +0100
+Processing by MenuController#index as HTML
+  Rendering menu/index.html.erb within layouts/application
+  Rendered application/_nav.html.erb (2.9ms)
+  Rendered application/_landing.html.erb (4.7ms)
+  Rendered menu/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 37ms (Views: 36.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/menu/new" for 127.0.0.1 at 2022-03-23 19:29:57 +0100
+Processing by MenuController#new as JS
+  Rendering menu/new.js.erb
+  Rendered application/_login_form.html.erb (349.3ms)
+  Rendered menu/new.js.erb (351.1ms)
+Completed 500 Internal Server Error in 354ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `resource' for #<#<Class:0x0000556efe341b48>:0x00007f10a14f9148>
+Did you mean?  rescue):
+    1: <h2>Log in</h2>
+    2: 
+    3: <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    4:     
+    5: <% end %>
+  
+app/views/application/_login_form.html.erb:3:in `_app_views_application__login_form_html_erb___1996576808608107924_25740'
+app/views/menu/new.js.erb:2:in `_app_views_menu_new_js_erb__2138562565455707866_25720'
+Started GET "/" for 127.0.0.1 at 2022-03-23 19:44:24 +0100
+  
+PG::ConnectionBad (connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: No such file or directory
+	Is the server running locally and accepting connections on that socket?
+):
+  
+pg (1.3.4) lib/pg/connection.rb:702:in `connect_start'
+pg (1.3.4) lib/pg/connection.rb:702:in `new'
+pg (1.3.4) lib/pg.rb:69:in `connect'
+activerecord (5.2.7) lib/active_record/connection_adapters/postgresql_adapter.rb:692:in `connect'
+activerecord (5.2.7) lib/active_record/connection_adapters/postgresql_adapter.rb:223:in `initialize'
+activerecord (5.2.7) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `new'
+activerecord (5.2.7) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `postgresql_connection'
+activerecord (5.2.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:830:in `new_connection'
+activerecord (5.2.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:874:in `checkout_new_connection'
+activerecord (5.2.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:853:in `try_to_checkout_new_connection'
+activerecord (5.2.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:814:in `acquire_connection'
+activerecord (5.2.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:538:in `checkout'
+activerecord (5.2.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:382:in `connection'
+activerecord (5.2.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:1033:in `retrieve_connection'
+activerecord (5.2.7) lib/active_record/connection_handling.rb:118:in `retrieve_connection'
+activerecord (5.2.7) lib/active_record/connection_handling.rb:90:in `connection'
+activerecord (5.2.7) lib/active_record/migration.rb:554:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.7) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.7) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.7) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.7) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2022-03-23 19:49:07 +0100
+  [1m[35m (20.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/odin/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+Processing by MenuController#index as HTML
+  Rendering menu/index.html.erb within layouts/application
+  Rendered application/_nav.html.erb (824.7ms)
+  Rendered application/_landing.html.erb (828.2ms)
+  Rendered menu/index.html.erb within layouts/application (831.3ms)
+Completed 200 OK in 966ms (Views: 940.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/menu/new" for 127.0.0.1 at 2022-03-23 19:49:12 +0100
+Processing by MenuController#new as HTML
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-03-23 19:49:12 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3312.9ms)
+Completed 200 OK in 3615ms (Views: 3376.9ms | ActiveRecord: 199.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-23 19:53:53 +0100
+Processing by MenuController#index as HTML
+  Rendering menu/index.html.erb within layouts/application
+  Rendered application/_nav.html.erb (30.9ms)
+  Rendered application/_landing.html.erb (33.1ms)
+  Rendered menu/index.html.erb within layouts/application (54.5ms)
+Completed 200 OK in 78ms (Views: 77.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-03-23 19:53:54 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 44ms (Views: 42.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-03-23 19:53:57 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 42ms (Views: 39.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-23 20:02:45 +0100
+Processing by MenuController#index as HTML
+  Rendering menu/index.html.erb within layouts/application
+  Rendered application/_nav.html.erb (2.5ms)
+  Rendered application/_landing.html.erb (3.9ms)
+  Rendered menu/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 39ms (Views: 37.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/menu/new" for 127.0.0.1 at 2022-03-23 20:02:50 +0100
+Processing by MenuController#new as HTML
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-03-23 20:02:50 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 68ms (Views: 33.7ms | ActiveRecord: 14.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-23 20:03:27 +0100
+Processing by MenuController#index as HTML
+  Rendering menu/index.html.erb within layouts/application
+  Rendered application/_nav.html.erb (2.6ms)
+  Rendered application/_landing.html.erb (5.0ms)
+  Rendered menu/index.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 41ms (Views: 39.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/menu/new" for 127.0.0.1 at 2022-03-23 20:03:29 +0100
+Processing by MenuController#new as JS
+  Rendering menu/new.js.erb
+  Rendered application/_rdv_search.html.erb (1.4ms)
+  Rendered menu/new.js.erb (4.4ms)
+Completed 500 Internal Server Error in 197ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/odin/Desktop/🎲/projet-final-avocat/app/views/application/_rdv_search.html.erb:4: syntax error, unexpected `do'
+...end=  form_with(firms_path), do |form| @output_buffer.safe_a...
+...                             ^~
+/home/odin/Desktop/🎲/projet-final-avocat/app/views/application/_rdv_search.html.erb:10: syntax error, unexpected `ensure', expecting end-of-input
+          ensure
+          ^~~~~~
+):
+  
+app/views/application/_rdv_search.html.erb:4: syntax error, unexpected `do'
+app/views/application/_rdv_search.html.erb:10: syntax error, unexpected `ensure', expecting end-of-input
+app/views/menu/new.js.erb:2:in `_app_views_menu_new_js_erb__3017751477424405687_26920'
+Started GET "/" for 127.0.0.1 at 2022-03-23 20:03:31 +0100
+Processing by MenuController#index as HTML
+  Rendering menu/index.html.erb within layouts/application
+  Rendered application/_nav.html.erb (2.4ms)
+  Rendered application/_landing.html.erb (4.5ms)
+  Rendered menu/index.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 41ms (Views: 39.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/menu/new" for 127.0.0.1 at 2022-03-23 20:03:32 +0100
+Processing by MenuController#new as JS
+  Rendering menu/new.js.erb
+  Rendered application/_rdv_search.html.erb (2.1ms)
+  Rendered menu/new.js.erb (6.1ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/odin/Desktop/🎲/projet-final-avocat/app/views/application/_rdv_search.html.erb:4: syntax error, unexpected `do'
+...end=  form_with(firms_path), do |form| @output_buffer.safe_a...
+...                             ^~
+/home/odin/Desktop/🎲/projet-final-avocat/app/views/application/_rdv_search.html.erb:10: syntax error, unexpected `ensure', expecting end-of-input
+          ensure
+          ^~~~~~
+):
+  
+app/views/application/_rdv_search.html.erb:4: syntax error, unexpected `do'
+app/views/application/_rdv_search.html.erb:10: syntax error, unexpected `ensure', expecting end-of-input
+app/views/menu/new.js.erb:2:in `_app_views_menu_new_js_erb__3017751477424405687_27260'
+Started GET "/menu/new" for 127.0.0.1 at 2022-03-23 20:03:40 +0100
+Processing by MenuController#new as JS
+  Rendering menu/new.js.erb
+  Rendered application/_rdv_search.html.erb (3.3ms)
+  Rendered menu/new.js.erb (8.1ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/odin/Desktop/🎲/projet-final-avocat/app/views/application/_rdv_search.html.erb:4: syntax error, unexpected `do'
+...end=  form_with(firms_path), do |form| @output_buffer.safe_a...
+...                             ^~
+/home/odin/Desktop/🎲/projet-final-avocat/app/views/application/_rdv_search.html.erb:10: syntax error, unexpected `ensure', expecting end-of-input
+          ensure
+          ^~~~~~
+):
+  
+app/views/application/_rdv_search.html.erb:4: syntax error, unexpected `do'
+app/views/application/_rdv_search.html.erb:10: syntax error, unexpected `ensure', expecting end-of-input
+app/views/menu/new.js.erb:2:in `_app_views_menu_new_js_erb__3017751477424405687_27480'
+Started GET "/" for 127.0.0.1 at 2022-03-23 20:03:53 +0100
+Processing by MenuController#index as HTML
+  Rendering menu/index.html.erb within layouts/application
+  Rendered application/_nav.html.erb (3.5ms)
+  Rendered application/_landing.html.erb (10.3ms)
+  Rendered menu/index.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 45ms (Views: 43.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/menu/new" for 127.0.0.1 at 2022-03-23 20:03:55 +0100
+Processing by MenuController#new as JS
+  Rendering menu/new.js.erb
+  Rendered application/_nav.html.erb (2.9ms)
+  Rendered application/_rdv_search.html.erb (6.0ms)
+  Rendered menu/new.js.erb (8.0ms)
+Completed 200 OK in 12ms (Views: 10.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-23 20:07:16 +0100
+Processing by MenuController#index as HTML
+  Rendering menu/index.html.erb within layouts/application
+  Rendered application/_nav.html.erb (3.9ms)
+  Rendered application/_landing.html.erb (6.6ms)
+  Rendered menu/index.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 42ms (Views: 40.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/menu/new" for 127.0.0.1 at 2022-03-23 20:07:18 +0100
+Processing by MenuController#new as JS
+  Rendering menu/new.js.erb
+  Rendered application/_rdv_search.html.erb (2.0ms)
+  Rendered menu/new.js.erb (5.8ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/odin/Desktop/🎲/projet-final-avocat/app/views/application/_rdv_search.html.erb:4: syntax error, unexpected `do'
+...end=  form_with(firms_path), do |form| @output_buffer.safe_a...
+...                             ^~
+/home/odin/Desktop/🎲/projet-final-avocat/app/views/application/_rdv_search.html.erb:11: syntax error, unexpected `ensure', expecting end-of-input
+          ensure
+          ^~~~~~
+):
+  
+app/views/application/_rdv_search.html.erb:4: syntax error, unexpected `do'
+app/views/application/_rdv_search.html.erb:11: syntax error, unexpected `ensure', expecting end-of-input
+app/views/menu/new.js.erb:2:in `_app_views_menu_new_js_erb__3017751477424405687_28060'
+Started GET "/" for 127.0.0.1 at 2022-03-23 20:08:45 +0100
+Processing by MenuController#index as HTML
+  Rendering menu/index.html.erb within layouts/application
+  Rendered application/_nav.html.erb (1.9ms)
+  Rendered application/_landing.html.erb (3.4ms)
+  Rendered menu/index.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 36ms (Views: 34.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/menu/new" for 127.0.0.1 at 2022-03-23 20:08:47 +0100
+Processing by MenuController#new as JS
+  Rendering menu/new.js.erb
+  Rendered application/_rdv_search.html.erb (2.0ms)
+  Rendered menu/new.js.erb (5.7ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/odin/Desktop/🎲/projet-final-avocat/app/views/application/_rdv_search.html.erb:4: syntax error, unexpected `do'
+...end=  form_with(firms_path), do |form| @output_buffer.safe_a...
+...                             ^~
+/home/odin/Desktop/🎲/projet-final-avocat/app/views/application/_rdv_search.html.erb:10: syntax error, unexpected `ensure', expecting end-of-input
+          ensure
+          ^~~~~~
+):
+  
+app/views/application/_rdv_search.html.erb:4: syntax error, unexpected `do'
+app/views/application/_rdv_search.html.erb:10: syntax error, unexpected `ensure', expecting end-of-input
+app/views/menu/new.js.erb:2:in `_app_views_menu_new_js_erb__3017751477424405687_28400'
+Started GET "/" for 127.0.0.1 at 2022-03-23 20:09:16 +0100
+Processing by MenuController#index as HTML
+  Rendering menu/index.html.erb within layouts/application
+  Rendered application/_nav.html.erb (3.8ms)
+  Rendered application/_landing.html.erb (10.2ms)
+  Rendered menu/index.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 41ms (Views: 40.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/menu/new" for 127.0.0.1 at 2022-03-23 20:09:18 +0100
+Processing by MenuController#new as JS
+  Rendering menu/new.js.erb
+  Rendered application/_nav.html.erb (2.8ms)
+  Rendered application/_login.html.erb (388.8ms)
+  Rendered application/_rdv_search.html.erb (489.3ms)
+  Rendered menu/new.js.erb (491.1ms)
+Completed 500 Internal Server Error in 494ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `resource' for #<#<Class:0x00007f6d3edb6f70>:0x00007f6d3caa13f0>
+Did you mean?  rescue):
+    1: 
+    2: <h2>Log in</h2><br>
+    3: 
+    4: <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    5:   <div class="field">
+    6:     <%= f.label :email %><br />
+    7:     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  
+app/views/application/_login.html.erb:4:in `_app_views_application__login_html_erb___3711613059110637895_28800'
+app/views/application/_rdv_search.html.erb:3:in `_app_views_application__rdv_search_html_erb___533264149897978715_28760'
+app/views/menu/new.js.erb:2:in `_app_views_menu_new_js_erb__3017751477424405687_28740'
+Started GET "/" for 127.0.0.1 at 2022-03-23 20:10:45 +0100
+Processing by MenuController#index as HTML
+  Rendering menu/index.html.erb within layouts/application
+  Rendered application/_nav.html.erb (2.7ms)
+  Rendered application/_landing.html.erb (5.1ms)
+  Rendered menu/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 39ms (Views: 38.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/menu/new" for 127.0.0.1 at 2022-03-23 20:10:46 +0100
+Processing by MenuController#new as JS
+  Rendering menu/new.js.erb
+  Rendered application/_rdv_search.html.erb (2.1ms)
+  Rendered menu/new.js.erb (3.9ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/odin/Desktop/🎲/projet-final-avocat/app/views/application/_rdv_search.html.erb:4: syntax error, unexpected `do'
+...end=  form_with(firms_path), do |form| @output_buffer.safe_a...
+...                             ^~
+/home/odin/Desktop/🎲/projet-final-avocat/app/views/application/_rdv_search.html.erb:11: syntax error, unexpected `ensure', expecting end-of-input
+          ensure
+          ^~~~~~
+):
+  
+app/views/application/_rdv_search.html.erb:4: syntax error, unexpected `do'
+app/views/application/_rdv_search.html.erb:11: syntax error, unexpected `ensure', expecting end-of-input
+app/views/menu/new.js.erb:2:in `_app_views_menu_new_js_erb__3017751477424405687_29300'
+Started GET "/" for 127.0.0.1 at 2022-03-23 20:11:01 +0100
+Processing by MenuController#index as HTML
+  Rendering menu/index.html.erb within layouts/application
+  Rendered application/_nav.html.erb (3.2ms)
+  Rendered application/_landing.html.erb (5.4ms)
+  Rendered menu/index.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 44ms (Views: 43.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/menu/new" for 127.0.0.1 at 2022-03-23 20:11:02 +0100
+Processing by MenuController#new as JS
+  Rendering menu/new.js.erb
+  Rendered application/_nav.html.erb (2.8ms)
+  Rendered application/_rdv_search.html.erb (32.7ms)
+  Rendered menu/new.js.erb (35.8ms)
+Completed 200 OK in 42ms (Views: 39.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-23 20:11:47 +0100
+Processing by MenuController#index as HTML
+  Rendering menu/index.html.erb within layouts/application
+  Rendered application/_nav.html.erb (2.5ms)
+  Rendered application/_landing.html.erb (4.7ms)
+  Rendered menu/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 36ms (Views: 34.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/menu/new" for 127.0.0.1 at 2022-03-23 20:11:48 +0100
+Processing by MenuController#new as JS
+  Rendering menu/new.js.erb
+  Rendered application/_nav.html.erb (3.1ms)
+  Rendered application/_rdv_search.html.erb (6.2ms)
+  Rendered menu/new.js.erb (9.9ms)
+Completed 200 OK in 14ms (Views: 12.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-23 20:12:19 +0100
+Processing by MenuController#index as HTML
+  Rendering menu/index.html.erb within layouts/application
+  Rendered application/_nav.html.erb (2.6ms)
+  Rendered application/_landing.html.erb (4.7ms)
+  Rendered menu/index.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 30ms (Views: 29.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/menu/new" for 127.0.0.1 at 2022-03-23 20:12:20 +0100
+Processing by MenuController#new as JS
+  Rendering menu/new.js.erb
+  Rendered application/_rdv_search.html.erb (162.8ms)
+  Rendered menu/new.js.erb (166.7ms)
+Completed 500 Internal Server Error in 173ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/odin/Desktop/🎲/projet-final-avocat/app/views/application/_rdv_search.html.erb:4: syntax error, unexpected ',', expecting `end'
+...         form_with(firms_path), do |form| 
+...                              ^
+/home/odin/Desktop/🎲/projet-final-avocat/app/views/application/_rdv_search.html.erb:11: syntax error, unexpected `ensure', expecting end-of-input
+          ensure
+          ^~~~~~
+):
+  
+app/views/application/_rdv_search.html.erb:4: syntax error, unexpected ',', expecting `end'
+app/views/application/_rdv_search.html.erb:11: syntax error, unexpected `ensure', expecting end-of-input
+app/views/menu/new.js.erb:2:in `_app_views_menu_new_js_erb__3017751477424405687_30120'
+Started GET "/menu/new" for 127.0.0.1 at 2022-03-23 20:12:22 +0100
+Processing by MenuController#new as JS
+  Rendering menu/new.js.erb
+  Rendered application/_rdv_search.html.erb (1.4ms)
+  Rendered menu/new.js.erb (4.0ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/odin/Desktop/🎲/projet-final-avocat/app/views/application/_rdv_search.html.erb:4: syntax error, unexpected ',', expecting `end'
+...         form_with(firms_path), do |form| 
+...                              ^
+/home/odin/Desktop/🎲/projet-final-avocat/app/views/application/_rdv_search.html.erb:11: syntax error, unexpected `ensure', expecting end-of-input
+          ensure
+          ^~~~~~
+):
+  
+app/views/application/_rdv_search.html.erb:4: syntax error, unexpected ',', expecting `end'
+app/views/application/_rdv_search.html.erb:11: syntax error, unexpected `ensure', expecting end-of-input
+app/views/menu/new.js.erb:2:in `_app_views_menu_new_js_erb__3017751477424405687_30340'
+Started GET "/" for 127.0.0.1 at 2022-03-23 20:14:07 +0100
+Processing by MenuController#index as HTML
+  Rendering menu/index.html.erb within layouts/application
+  Rendered application/_nav.html.erb (2.9ms)
+  Rendered application/_landing.html.erb (5.3ms)
+  Rendered menu/index.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 33ms (Views: 31.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/menu/new" for 127.0.0.1 at 2022-03-23 20:14:09 +0100
+Processing by MenuController#new as JS
+  Rendering menu/new.js.erb
+  Rendered application/_rdv_search.html.erb (1.1ms)
+  Rendered menu/new.js.erb (10.6ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/odin/Desktop/🎲/projet-final-avocat/app/views/application/_rdv_search.html.erb:4: syntax error, unexpected `do'
+...end=  form_with(firms_path), do |form| @output_buffer.safe_a...
+...                             ^~
+/home/odin/Desktop/🎲/projet-final-avocat/app/views/application/_rdv_search.html.erb:11: syntax error, unexpected `ensure', expecting end-of-input
+          ensure
+          ^~~~~~
+):
+  
+app/views/application/_rdv_search.html.erb:4: syntax error, unexpected `do'
+app/views/application/_rdv_search.html.erb:11: syntax error, unexpected `ensure', expecting end-of-input
+app/views/menu/new.js.erb:2:in `_app_views_menu_new_js_erb__3017751477424405687_30680'
+Started GET "/" for 127.0.0.1 at 2022-03-23 20:19:27 +0100
+Processing by MenuController#index as HTML
+  Rendering menu/index.html.erb within layouts/application
+  Rendered application/_nav.html.erb (2.7ms)
+  Rendered application/_landing.html.erb (5.9ms)
+  Rendered menu/index.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 39ms (Views: 38.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/menu/new" for 127.0.0.1 at 2022-03-23 20:19:40 +0100
+Processing by MenuController#new as JS
+  Rendering menu/new.js.erb
+  Rendered application/_nav.html.erb (2.3ms)
+  Rendered application/_rdv_search.html.erb (4.4ms)
+  Rendered menu/new.js.erb (7.6ms)
+Completed 200 OK in 13ms (Views: 11.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/firms?zip_code=78&commit=Search" for 127.0.0.1 at 2022-03-23 20:19:57 +0100
+  
+ActionController::RoutingError (uninitialized constant FirmsController):
+  
+activesupport (5.2.7) lib/active_support/inflector/methods.rb:283:in `const_get'
+activesupport (5.2.7) lib/active_support/inflector/methods.rb:283:in `block in constantize'
+activesupport (5.2.7) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.7) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.7) lib/active_support/inflector/methods.rb:281:in `constantize'
+actionpack (5.2.7) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.7) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (5.2.7) lib/action_dispatch/routing/route_set.rb:46:in `controller'
+actionpack (5.2.7) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.2.7) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.7) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.7) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.7) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (5.2.7) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.7) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.7) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.7) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.7) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.7) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
