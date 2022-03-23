@@ -1058,3 +1058,108 @@ Started GET "/login" for 127.0.0.1 at 2022-03-23 10:57:55 +0100
 ActionController::RoutingError (No route matches [GET] "/login"):
   
 >>>>>>> main
+Started GET "/" for 127.0.0.1 at 2022-03-23 14:14:36 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PrincipalController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering principal/index.html.erb within layouts/application
+  Rendered application/_nav.html.erb (Duration: 71.5ms | Allocations: 52791)
+  Rendered application/_landing.html.erb (Duration: 72.1ms | Allocations: 53154)
+  Rendered principal/index.html.erb within layouts/application (Duration: 73.3ms | Allocations: 53671)
+  Rendered layout layouts/application.html.erb (Duration: 76.4ms | Allocations: 56398)
+Completed 200 OK in 87ms (Views: 83.0ms | ActiveRecord: 0.0ms | Allocations: 61201)
+
+
+Started GET "/login" for 127.0.0.1 at 2022-03-23 14:14:41 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/login"):
+  
+Started GET "/" for 127.0.0.1 at 2022-03-23 14:14:43 +0100
+Processing by PrincipalController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering principal/index.html.erb within layouts/application
+  Rendered application/_nav.html.erb (Duration: 1.5ms | Allocations: 633)
+  Rendered application/_landing.html.erb (Duration: 1.7ms | Allocations: 709)
+  Rendered principal/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 792)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | Allocations: 1393)
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.0ms | Allocations: 1651)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-23 14:14:51 +0100
+Processing by PrincipalController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering principal/index.html.erb within layouts/application
+  Rendered application/_nav.html.erb (Duration: 1.5ms | Allocations: 633)
+  Rendered application/_landing.html.erb (Duration: 1.7ms | Allocations: 709)
+  Rendered principal/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 792)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | Allocations: 1399)
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.0ms | Allocations: 1656)
+
+
+Started GET "/login" for 127.0.0.1 at 2022-03-23 14:14:55 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/login"):
+  
+Started GET "/" for 127.0.0.1 at 2022-03-23 14:15:00 +0100
+Processing by PrincipalController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering principal/index.html.erb within layouts/application
+  Rendered application/_nav.html.erb (Duration: 1.8ms | Allocations: 633)
+  Rendered application/_landing.html.erb (Duration: 2.0ms | Allocations: 709)
+  Rendered principal/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 792)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | Allocations: 1400)
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.0ms | Allocations: 1653)
+
+
+Started GET "/rdv" for 127.0.0.1 at 2022-03-23 14:15:04 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/rdv"):
+  
+Started GET "/" for 127.0.0.1 at 2022-03-23 14:15:05 +0100
+Processing by PrincipalController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering principal/index.html.erb within layouts/application
+  Rendered application/_nav.html.erb (Duration: 2.0ms | Allocations: 637)
+  Rendered application/_landing.html.erb (Duration: 2.2ms | Allocations: 713)
+  Rendered principal/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 796)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | Allocations: 1390)
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.0ms | Allocations: 1645)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-03-23 14:15:46 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.8ms | Allocations: 824)
+  Rendered application/_login.html.erb (Duration: 142.7ms | Allocations: 349178)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 143.8ms | Allocations: 349604)
+  Rendered layout layouts/application.html.erb (Duration: 144.2ms | Allocations: 350067)
+Completed 200 OK in 166ms (Views: 145.8ms | ActiveRecord: 5.5ms | Allocations: 360323)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-03-23 14:15:53 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 121)
+  Rendered application/_login.html.erb (Duration: 2.3ms | Allocations: 988)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1087)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | Allocations: 1539)
+Completed 200 OK in 6ms (Views: 4.1ms | ActiveRecord: 0.0ms | Allocations: 2149)
+
+
+Started GET "/users/log_in" for 127.0.0.1 at 2022-03-23 14:16:01 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/log_in"):
+  
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-03-23 14:16:22 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 121)
+  Rendered application/_login.html.erb (Duration: 2.7ms | Allocations: 984)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1083)
+  Rendered layout layouts/application.html.erb (Duration: 3.7ms | Allocations: 1535)
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.0ms | Allocations: 2120)
+
+
