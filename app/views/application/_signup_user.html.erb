@@ -1,41 +1,28 @@
-<div class="signup-user">
-<h1>Inscrivez-vous</h1>
-<p>Vous avez besoin d'un conseil auprès d'un avocat et bien inscrivez-vous et vous pouvez prendre un rendez-vous dans les 48 heures !</p>
-<form action="/page-traitement-donnees" method="post">
-<div>
-<label for="civilité">Civilité</label>
-<select name="civilité" id="civilité" required>
-<option >Choisissez votre civilité</option>
-<option >Monsieur</option>
-<option >Madame</option>
-</select>
-</div>
-<div>
-<label for="nom">Votre nom</label>
-<input type="text" id="nom" name="nom" placeholder="Jean" required>
-</div>
-<div>
-<label for="prénom">Votre prénom</label>
-<input type="text" id="prénom" first_name="prénom" placeholder="Valjean" required>
-</div>
-<div>
-<label for="email">Votre e-mail</label>
-<input type="text" id="email" name="email" placeholder="jeanvaljean@mail.com" required>
-</div>
-<div>
-<label for="adresse">Adresse</label>
-<input type="text" id="adresse" name="adresse" placeholder="14 rue Victor Hugo 75016 Paris" required>
-</div>
-<div>
-<label for="telephone">Numéro de téléphone</label>
-<input type="text" id="telephone" name="telephone" placeholder="010203040506" required>
-</div>
-<div>
-<label for="motdepasse">Mot de passe</label>
-<input type="text" id="motdepasse" name="motdepasse" placeholder="Plus de 6 caractères" required>
-</div>
-<div>
-<button type="submit">Inscrivez-vous</button>
-</div>
-</form>
+<div class="signup-user"><br>
+<h2>Sign up</h2>
+
+<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :email,
+                required: true,
+                autofocus: true,
+                input_html: { autocomplete: "email" }%>
+    <%= f.input :password,
+                required: true,
+                hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                input_html: { autocomplete: "new-password" } %>
+    <%= f.input :password_confirmation,
+                required: true,
+                input_html: { autocomplete: "new-password" } %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, "Sign up" %>
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>
+
 </div>
