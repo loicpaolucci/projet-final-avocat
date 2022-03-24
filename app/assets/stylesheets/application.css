@@ -12,7 +12,11 @@
  *
  *=require nav
  *=require login
- *=require signup_user
+ *=require show
+
+
+ *=require firm_index
  *=require signup_firm
+ *=require signup_user
  *=require password
  */
