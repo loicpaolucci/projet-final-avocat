@@ -6,7 +6,8 @@ class FirmsController < ApplicationController
         end
     end
 
-    def show 
+    def show
+        @firm = Firm.find(params[:id])
     end
 
 end

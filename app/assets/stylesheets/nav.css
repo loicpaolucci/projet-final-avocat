@@ -21,7 +21,6 @@
     flex-wrap: wrap;
     justify-content: space-between;
     padding : 0;
-    width : 100vw;
     height : 120px;
 }
 
@@ -80,4 +79,9 @@
 
 .navbar-toggler {
     margin-right : 30px;
+}
+
+.nav-link:hover {
+    transition: 0.4s ease-in-out;
+    transform: translateX(5%);
 }
