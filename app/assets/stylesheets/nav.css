@@ -17,6 +17,9 @@
 }
 
 .navbar {
+    display : flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     padding : 0;
     width : 100vw;
     height : 120px;
@@ -48,7 +51,6 @@
     justify-content: center;
     height : 100%;
     width : 100%;
-    color : whitesmoke;
     font-size: 100%;
 }
 
@@ -67,4 +69,15 @@
 
 .gradient {
     background: linear-gradient(#CA0707, #9198e500);
+}
+
+.CLASSEIMAGE {
+    height: 100%;
+    object-fit: contain;
+    position : relative;
+    left : 0;
+}
+
+.navbar-toggler {
+    margin-right : 30px;
 }
