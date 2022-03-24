@@ -10185,3 +10185,207 @@ Processing by MenuController#index as HTML
 Completed 200 OK in 17ms (Views: 16.8ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for ::1 at 2022-03-24 22:13:01 +0100
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/paolucciloic/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+Processing by MenuController#index as HTML
+  Rendering menu/index.html.erb within layouts/application
+  Rendered application/_landing.html.erb (0.3ms)
+  Rendered menu/index.html.erb within layouts/application (2.0ms)
+  Rendered application/_nav.html.erb (0.4ms)
+Completed 200 OK in 132ms (Views: 131.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-03-24 22:13:08 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.5ms)
+  Rendered application/_login.html.erb (162.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (165.2ms)
+  Rendered application/_nav.html.erb (0.4ms)
+Completed 200 OK in 203ms (Views: 175.2ms | ActiveRecord: 12.8ms)
+
+
+Started GET "/menu/new" for ::1 at 2022-03-24 22:13:16 +0100
+Processing by MenuController#new as HTML
+  Rendering menu/new.html.erb within layouts/application
+  Rendered application/_rdv_search.html.erb (0.4ms)
+  Rendered menu/new.html.erb within layouts/application (3.1ms)
+  Rendered application/_nav.html.erb (1.3ms)
+Completed 200 OK in 33ms (Views: 31.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/menu/new" for ::1 at 2022-03-24 22:13:44 +0100
+Processing by MenuController#new as HTML
+  Rendering menu/new.html.erb within layouts/application
+  Rendered application/_rdv_search.html.erb (0.4ms)
+  Rendered menu/new.html.erb within layouts/application (3.5ms)
+  Rendered application/_nav.html.erb (1.4ms)
+Completed 200 OK in 36ms (Views: 34.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-03-24 22:13:47 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.3ms)
+  Rendered application/_login.html.erb (10.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (14.9ms)
+  Rendered application/_nav.html.erb (1.0ms)
+Completed 200 OK in 40ms (Views: 38.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2022-03-24 22:14:25 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vurcI3qQMVfvS93gLnBCsq6KWM3XI5CQI+NcuAB3/LQxcO3TIk440DUPLjIeVA0sHiPnvDcpNmTfIywK+CGH8g==", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vurcI3qQMVfvS93gLnBCsq6KWM3XI5CQI+NcuAB3/LQxcO3TIk440DUPLjIeVA0sHiPnvDcpNmTfIywK+CGH8g==", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered application/_login.html.erb (7.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (9.6ms)
+  Rendered application/_nav.html.erb (1.0ms)
+Completed 200 OK in 33ms (Views: 32.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2022-03-24 22:14:28 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.4ms)
+  Rendered application/_signup_user.html.erb (10.1ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (14.4ms)
+  Rendered application/_nav.html.erb (0.9ms)
+Completed 200 OK in 39ms (Views: 37.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2022-03-24 22:14:30 +0100
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"x71QUTNO64F97x8Ril2Qut3pJ0QdmIYuikTj2kjjroBIJ2Gha5DiBqer7MO6ed8kbUCYNf2SINp2hJNosLXVxg==", "user"=>{"email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/paolucciloic/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ /Users/paolucciloic/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.2ms)
+  Rendered application/_signup_user.html.erb (10.2ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (13.1ms)
+  Rendered application/_nav.html.erb (1.1ms)
+Completed 200 OK in 44ms (Views: 34.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-03-24 22:14:42 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered application/_login.html.erb (8.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (11.2ms)
+  Rendered application/_nav.html.erb (1.0ms)
+Completed 200 OK in 39ms (Views: 38.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2022-03-24 22:14:43 +0100
+Processing by MenuController#index as HTML
+  Rendering menu/index.html.erb within layouts/application
+  Rendered application/_landing.html.erb (0.3ms)
+  Rendered menu/index.html.erb within layouts/application (2.0ms)
+  Rendered application/_nav.html.erb (0.8ms)
+Completed 200 OK in 22ms (Views: 20.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2022-03-24 22:14:55 +0100
+Processing by MenuController#index as HTML
+  Rendering menu/index.html.erb within layouts/application
+  Rendered application/_landing.html.erb (0.3ms)
+  Rendered menu/index.html.erb within layouts/application (2.3ms)
+  Rendered application/_nav.html.erb (1.0ms)
+Completed 200 OK in 32ms (Views: 31.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/panier" for ::1 at 2022-03-24 22:14:56 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/panier"):
+  
+actionpack (5.2.7) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.7) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.7) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/profil/4" for ::1 at 2022-03-24 22:14:57 +0100
+Processing by ProfilController#show as HTML
+  Parameters: {"id"=>"4"}
+  Rendering profil/show.html.erb within layouts/application
+  Rendered application/_show_profil.html.erb (0.7ms)
+  Rendered profil/show.html.erb within layouts/application (1.5ms)
+  Rendered application/_nav.html.erb (0.4ms)
+Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/menu/new" for ::1 at 2022-03-24 22:15:14 +0100
+Processing by MenuController#new as HTML
+  Rendering menu/new.html.erb within layouts/application
+  Rendered application/_rdv_search.html.erb (0.4ms)
+  Rendered menu/new.html.erb within layouts/application (2.7ms)
+  Rendered application/_nav.html.erb (1.2ms)
+Completed 200 OK in 32ms (Views: 31.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/firms?zip_code=11&commit=Search" for ::1 at 2022-03-24 22:15:18 +0100
+Processing by FirmsController#index as JS
+  Parameters: {"zip_code"=>"11", "commit"=>"Search"}
+  [1m[36mDepartement Load (1.2ms)[0m  [1m[34mSELECT  "departements".* FROM "departements" WHERE "departements"."zip_code" = $1 LIMIT $2[0m  [["zip_code", "11"], ["LIMIT", 1]]
+  ↳ app/controllers/firms_controller.rb:3
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 5.7ms)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass):
+  
+app/controllers/firms_controller.rb:3:in `index'
+Started GET "/firms?zip_code=44&commit=Search" for ::1 at 2022-03-24 22:15:23 +0100
+Processing by FirmsController#index as JS
+  Parameters: {"zip_code"=>"44", "commit"=>"Search"}
+  [1m[36mDepartement Load (0.3ms)[0m  [1m[34mSELECT  "departements".* FROM "departements" WHERE "departements"."zip_code" = $1 LIMIT $2[0m  [["zip_code", "44"], ["LIMIT", 1]]
+  ↳ app/controllers/firms_controller.rb:3
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.3ms)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass):
+  
+app/controllers/firms_controller.rb:3:in `index'
+Started GET "/firms?zip_code=44&commit=Search" for ::1 at 2022-03-24 22:15:24 +0100
+Processing by FirmsController#index as JS
+  Parameters: {"zip_code"=>"44", "commit"=>"Search"}
+  [1m[36mDepartement Load (0.3ms)[0m  [1m[34mSELECT  "departements".* FROM "departements" WHERE "departements"."zip_code" = $1 LIMIT $2[0m  [["zip_code", "44"], ["LIMIT", 1]]
+  ↳ app/controllers/firms_controller.rb:3
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.3ms)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass):
+  
+app/controllers/firms_controller.rb:3:in `index'
