@@ -1,6 +1,6 @@
 <div class="navbar flex">
     <div class="nav-div logo-div"><a href="#"><%= image_tag "red_logo" %></a></div>
-    <div class="nav-div"><a class="red-nav-links" href="#">PRENDRE UN RENDEZ-VOUS</a></div>
+    <div class="nav-div"><%= link_to "PRENDRE UN RENDEZ-VOUS", new_menu_path, class: "red-nav-links", remote: true%></div>
     <div class="nav-div"><a class="red-nav-links" href="#aide">AIDE</a></div>
-    <div class="nav-div"><%= link_to "SE CONNECTER", new_menu_path, class: "red-nav-links", remote: true %></div>
+    <div class="nav-div"><%= link_to "SE CONNECTER", new_user_session_path, class: "red-nav-links"%></div>
 </div>
