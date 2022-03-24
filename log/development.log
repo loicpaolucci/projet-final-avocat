@@ -4303,3 +4303,122 @@ puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
 puma (3.12.6) lib/puma/server.rb:476:in `process_client'
 puma (3.12.6) lib/puma/server.rb:334:in `block in run'
 puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2022-03-24 12:58:04 +0100
+  [1m[35m (13.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/odin/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+Processing by MenuController#index as HTML
+  Rendering menu/index.html.erb within layouts/application
+  Rendered application/_nav.html.erb (369.3ms)
+  Rendered application/_landing.html.erb (378.4ms)
+  Rendered menu/index.html.erb within layouts/application (395.9ms)
+Completed 200 OK in 571ms (Views: 548.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/menu/new" for 127.0.0.1 at 2022-03-24 12:58:07 +0100
+Processing by MenuController#new as JS
+  Rendering menu/new.js.erb
+  Rendered application/_nav.html.erb (3.0ms)
+  Rendered application/_rdv_search.html.erb (5.4ms)
+  Rendered menu/new.js.erb (144.1ms)
+Completed 200 OK in 284ms (Views: 147.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/firms?zip_code=44&commit=Search" for 127.0.0.1 at 2022-03-24 12:58:14 +0100
+Processing by FirmsController#index as JS
+  Parameters: {"zip_code"=>"44", "commit"=>"Search"}
+  [1m[36mDepartement Load (42.2ms)[0m  [1m[34mSELECT  "departements".* FROM "departements" WHERE "departements"."zip_code" = $1 LIMIT $2[0m  [["zip_code", "44"], ["LIMIT", 1]]
+  ↳ app/controllers/firms_controller.rb:3
+  Rendering firms/index.js.erb
+  [1m[36mFirm Load (16.1ms)[0m  [1m[34mSELECT "firms".* FROM "firms"[0m
+  ↳ app/views/application/_firm_list.html.erb:2
+  Rendered application/_firm_list.html.erb (37.7ms)
+  Rendered firms/index.js.erb (41.6ms)
+Completed 200 OK in 137ms (Views: 29.0ms | ActiveRecord: 90.3ms)
+
+
+Started GET "/firms?zip_code=60&commit=Search" for 127.0.0.1 at 2022-03-24 13:30:01 +0100
+Processing by FirmsController#index as JS
+  Parameters: {"zip_code"=>"60", "commit"=>"Search"}
+  [1m[36mDepartement Load (1.0ms)[0m  [1m[34mSELECT  "departements".* FROM "departements" WHERE "departements"."zip_code" = $1 LIMIT $2[0m  [["zip_code", "60"], ["LIMIT", 1]]
+  ↳ app/controllers/firms_controller.rb:3
+Completed 500 Internal Server Error in 920ms (ActiveRecord: 1.9ms)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass):
+  
+app/controllers/firms_controller.rb:3:in `index'
+Started GET "/" for 127.0.0.1 at 2022-03-24 13:30:11 +0100
+Processing by MenuController#index as HTML
+  Rendering menu/index.html.erb within layouts/application
+  Rendered application/_nav.html.erb (881.1ms)
+  Rendered application/_landing.html.erb (925.7ms)
+  Rendered menu/index.html.erb within layouts/application (1321.4ms)
+Completed 200 OK in 3977ms (Views: 3827.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/menu/new" for 127.0.0.1 at 2022-03-24 13:30:22 +0100
+Processing by MenuController#new as JS
+  Rendering menu/new.js.erb
+  Rendered application/_nav.html.erb (12.5ms)
+  Rendered application/_rdv_search.html.erb (101.7ms)
+  Rendered menu/new.js.erb (171.9ms)
+Completed 200 OK in 283ms (Views: 199.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/firms?zip_code=94&commit=Search" for 127.0.0.1 at 2022-03-24 13:30:35 +0100
+Processing by FirmsController#index as JS
+  Parameters: {"zip_code"=>"94", "commit"=>"Search"}
+  [1m[36mDepartement Load (0.4ms)[0m  [1m[34mSELECT  "departements".* FROM "departements" WHERE "departements"."zip_code" = $1 LIMIT $2[0m  [["zip_code", "94"], ["LIMIT", 1]]
+  ↳ app/controllers/firms_controller.rb:3
+Completed 500 Internal Server Error in 103ms (ActiveRecord: 0.7ms)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass):
+  
+app/controllers/firms_controller.rb:3:in `index'
+Started GET "/firms?zip_code=44&commit=Search" for 127.0.0.1 at 2022-03-24 13:30:39 +0100
+Processing by FirmsController#index as JS
+  Parameters: {"zip_code"=>"44", "commit"=>"Search"}
+  [1m[36mDepartement Load (0.5ms)[0m  [1m[34mSELECT  "departements".* FROM "departements" WHERE "departements"."zip_code" = $1 LIMIT $2[0m  [["zip_code", "44"], ["LIMIT", 1]]
+  ↳ app/controllers/firms_controller.rb:3
+  Rendering firms/index.js.erb
+  [1m[36mFirm Load (23.7ms)[0m  [1m[34mSELECT "firms".* FROM "firms"[0m
+  ↳ app/views/application/_firm_list.html.erb:2
+  Rendered application/_firm_list.html.erb (2103.3ms)
+  Rendered firms/index.js.erb (2402.4ms)
+Completed 200 OK in 2762ms (Views: 2517.7ms | ActiveRecord: 24.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-24 13:31:51 +0100
+Processing by MenuController#index as HTML
+  Rendering menu/index.html.erb within layouts/application
+  Rendered application/_nav.html.erb (3.5ms)
+  Rendered application/_landing.html.erb (40.7ms)
+  Rendered menu/index.html.erb within layouts/application (144.8ms)
+Completed 200 OK in 241ms (Views: 235.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/menu/new" for 127.0.0.1 at 2022-03-24 13:31:56 +0100
+Processing by MenuController#new as JS
+  Rendering menu/new.js.erb
+  Rendered application/_nav.html.erb (17.6ms)
+  Rendered application/_rdv_search.html.erb (49.7ms)
+  Rendered menu/new.js.erb (201.3ms)
+Completed 200 OK in 273ms (Views: 226.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/firms?zip_code=44&commit=Search" for 127.0.0.1 at 2022-03-24 13:32:17 +0100
+Processing by FirmsController#index as JS
+  Parameters: {"zip_code"=>"44", "commit"=>"Search"}
+  [1m[36mDepartement Load (0.8ms)[0m  [1m[34mSELECT  "departements".* FROM "departements" WHERE "departements"."zip_code" = $1 LIMIT $2[0m  [["zip_code", "44"], ["LIMIT", 1]]
+  ↳ app/controllers/firms_controller.rb:3
+  Rendering firms/index.js.erb
+  [1m[36mFirm Load (1.0ms)[0m  [1m[34mSELECT "firms".* FROM "firms"[0m
+  ↳ app/views/application/_firm_list.html.erb:2
+  Rendered application/_firm_list.html.erb (7.3ms)
+  Rendered firms/index.js.erb (18.1ms)
+Completed 200 OK in 154ms (Views: 28.1ms | ActiveRecord: 7.5ms)
+
+
