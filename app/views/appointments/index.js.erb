@@ -1,0 +1,2 @@
+document.getElementById("appointment-link").remove()
+document.getElementsByClassName("image-text")[0].insertAdjacentHTML("beforeend", "<%= j render 'take_rdv_list', appointments: @appointments %>")

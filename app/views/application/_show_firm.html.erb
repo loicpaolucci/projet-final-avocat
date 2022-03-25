@@ -1,9 +1,18 @@
 <body class="body-show">
   <div class="image-text"><h1 style="font-size:5rem"><span style="color:#8f0e0e; font-weight: 900"><%= @firm.name %></span><span style="color:#6e5308;font-weight: 700">FIRM</span></h1>
-    <p>Le meilleur des cabinets d' avocats!</p>    <button type="button" class="btn btn-outline-danger">Prende un rendez-vous</button>  
+    <p>Le meilleur des cabinets d' avocats!</p>
+    <div id="appointment-link">
+      <ul>
+        <li class="<%= @law_types.administratif ? "red-nav-link" : "collapse" %>">administratif</li>
+        <li class="<%= @law_types.constitutionnel ? "red-nav-link" : "collapse" %>">constitutionnel</li>
+        <li class="<%= @law_types.prive ? "red-nav-link" : "collapse" %>">prive</li>
+        <li class="<%= @law_types.civil ? "red-nav-link" : "collapse" %>">civil</li>
+        <li class="<%= @law_types.social ? "red-nav-link" : "collapse" %>">social</li>
+        <li class="<%= @law_types.penal ? "red-nav-link" : "collapse" %>">penal</li>
+        <li class="<%= @law_types.commercial ? "red-nav-link" : "collapse" %>">commercial</li>
+        <li class="<%= @law_types.judiciaire ? "red-nav-link" : "collapse" %>">judiciaire</li>
+      </ul>  
+      <%= link_to "Prendre un rendez-vous", firm_appointments_path(params[:id]), class: "btn btn-outline-danger", remote: true %>
+    </div>
   </div>
 </body>
-
-
-
-

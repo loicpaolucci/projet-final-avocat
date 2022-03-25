@@ -8,6 +8,7 @@ class FirmsController < ApplicationController
 
     def show
         @firm = Firm.find(params[:id])
+        @law_types = LawTypesByFirm.find_by(firm_id: params[:id])
     end
 
 end
