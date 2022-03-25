@@ -11,4 +11,8 @@ class FirmsController < ApplicationController
         @law_types = LawTypesByFirm.find_by(firm_id: params[:id])
     end
 
+
+    def new
+
+    end
 end
