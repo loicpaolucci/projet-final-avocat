@@ -4,6 +4,7 @@ body {
   display: flex;
   justify-content: center;
   color: #303030;
+  
   }
   
   .login {
@@ -12,6 +13,7 @@ body {
   border-radius: 8px;
   padding: 0 50px 0 50px;
   background: white;
+  margin-top: 150px;
   }
   
   .login > h1 {
@@ -31,7 +33,7 @@ body {
   }
   
   form div > label {
-  margin-bottom: 7px;
+  margin-bottom: 700px;
   font-weight: 600;
   }
   
