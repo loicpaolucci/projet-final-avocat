@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body {
   background: #8d8484;
   font-family: Montserrat, "sans-serif";
@@ -94,3 +95,17 @@ body {
   box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);
   color: #303030;
   }
+=======
+
+  .form-signin{
+
+    margin-top: 100px;
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+
+ 
+>>>>>>> d253813e053e939fe7655034bafca443ad09b09b

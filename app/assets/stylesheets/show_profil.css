@@ -4,12 +4,12 @@
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-background-image: url(https://us.123rf.com/450wm/belchonock/belchonock1603/belchonock160301866/54510587-voler-livres-ouverts-dans-la-bibliothèque.jpg?ver=6);
+    background-image: url(https://us.123rf.com/450wm/belchonock/belchonock1603/belchonock160301866/54510587-voler-livres-ouverts-dans-la-bibliothèque.jpg?ver=6);
 
 }
 .modal-body{
 
-    color: rgb(223, 16, 16);
+    color: rgb(207, 17, 17);
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
