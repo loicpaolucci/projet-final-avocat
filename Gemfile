@@ -12,6 +12,7 @@ gem 'table_print'
 gem 'letter_opener'
 gem 'faker'
 gem 'simple_form'
+gem 'phonelib'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.7'
 # Use postgresql as the database for Active Record

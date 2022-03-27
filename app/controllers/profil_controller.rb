@@ -1,7 +1,4 @@
 class ProfilController < ApplicationController
-        def create 
-        end
-
         def new 
         end
 
@@ -9,7 +6,7 @@ class ProfilController < ApplicationController
         end
 
         def show
-                @apt = Appointment.find_by(client_id: current_user.id)
+                @current_appointments = user_appointments(current_user.id)
         end
 
         def update

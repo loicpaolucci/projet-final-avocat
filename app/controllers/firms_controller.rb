@@ -7,6 +7,7 @@ class FirmsController < ApplicationController
     end
 
     def show
+        @lawyers = User.all
         @firm = Firm.find(params[:id])
         @law_types = LawTypesByFirm.find_by(firm_id: params[:id])
     end
@@ -14,5 +15,26 @@ class FirmsController < ApplicationController
 
     def new
 
+    end
+
+    def create
+        @firm = Firm.new(post_params)
+        if @firm.save
+            session[:new_firm] = @firm.id
+            redirect_to firm_path(@firm.id)
+        else
+            flash.now[:error] = "OUH LÀ GROS PROBLÈME DANS L'INSCRIPTION"
+            puts "60"*50
+            puts @firm.errors.messages
+            render new_registration_path
+        end
+    end
+
+    private
+
+    def post_params
+        params[:rating] = nil
+        params[:departement_id] = params[:departement_id].to_i
+        params.permit(:name, :address, :phone_number, :email, :departement_id, :rating)
     end
 end

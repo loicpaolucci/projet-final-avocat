@@ -1,9 +1,8 @@
-<body class="image-profil">
-  <% unless current_user.is_lawyer%>
-  <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
-    Mes Rendez-Vous
-  </button>
-  
+<% unless current_user.is_lawyer%>
+  <body class="image-profil">
+    <button type="button" class="btn btn-danger" style=" height : 50px; margin-top : 150px;" data-bs-toggle="modal" data-bs-target="#exampleModal">
+      Mes Rendez-Vous
+    </button>
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -11,8 +10,10 @@
             <h5 class="modal-title" id="exampleModalLabel">Mes RDV</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
-          <div class="modal-body"> 
-            Votre rdv est prevue le <%= @apt.start_date.day %> <%= Date::MONTHNAMES[@apt.start_date.month] %> à <%= @apt.start_date.hour %>h
+          <div class="modal-body">
+            <% @current_appointments.each do |appointment|%>
+              Rendez-vous prévu le <%= appointment.start_date.day %> <%= Date::MONTHNAMES[appointment.start_date.month] %> à <%= appointment.start_date.hour %>h
+            <% end %>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -20,8 +21,28 @@
         </div>
       </div>
     </div>
+  </body>
 <% end %>
 <% if current_user.is_lawyer %>
-
+  <div class="row lawyer-profile">
+    <div class="col-lg-6 col-sm-12">
+        <h1>Mes rendez-vous</h1>
+        <% @current_appointments.each do |appointment| %>
+          Rendez-vous prévu le <%= appointment.start_date.day %> <%= Date::MONTHNAMES[appointment.start_date.month] %> à <%= appointment.start_date.hour %>h
+          <%= link_to "Annuler" , firm_appointment_path(params[:id]), method: :delete, class: "btn btn-sm btn-outline-warning" %>
+          <p><% if appointment.is_confirmed %>Confirmé<% else %>Disponible<% end %></p>
+        <% end %>
+    </div>
+    <div class="col-lg-4 col-sm-12">
+      <%= form_with url: firm_appointments_path(current_user.firm_id), method: :post do |form| %>
+        <%= form.date_field :date %>
+        <%= form.time_field :time, :format=>"%H:%M" %>
+        <%= form.submit "Ajouter un rdv" %>
+      <% end %>
+    </div>
+    <div class="col-lg-2 col-sm-12">
+      blabla
+    </div>
+  </div>
 <% end %>
-</body>
+

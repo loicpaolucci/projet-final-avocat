@@ -3,7 +3,8 @@ Rails.application.routes.draw do
   devise_for :users
   resources :firms do
     resources :comments
-    resources :appointments, only: [:index]
+    resources :appointments, only: [:create, :index, :destroy, :update]
+    resources :lawyers
   end
   resources :menu
   resources :profil
