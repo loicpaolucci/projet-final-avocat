@@ -30,6 +30,7 @@ Departement.create(zip_code: 16, name: "Charente")
 Departement.create(zip_code: 17, name: "Charente-maritime")
 Departement.create(zip_code: 18, name: "Cher")
 Departement.create(zip_code: 19, name: "Corrèze")
+Departement.create(zip_code: 20, name: "Corse")
 Departement.create(zip_code: 21, name: "Côte-d'Or")
 Departement.create(zip_code: 22, name: "Côtes-d'Armor")
 Departement.create(zip_code: 23, name: "Creuse")
@@ -105,3 +106,16 @@ Departement.create(zip_code: 92, name: "Hauts-de-seine")
 Departement.create(zip_code: 93, name: "Seine-Saint-Denis")
 Departement.create(zip_code: 94, name: "Val-de-marne")
 Departement.create(zip_code: 95, name: "Val-d'Ois")
+
+95.times do |departement_id|
+    10.times do
+        firm = Firm.new
+        firm.name = Faker::Company.name
+        firm.rating = rand (1..2000)
+        firm.phone_number = "+33671563945"
+        firm.email = firm.name + "@gmail.com"
+        firm.departement_id = Departement.find_by(zip_code: (departement_id + 1).to_s).id
+        firm.save
+        LawTypesByFirm.create(constitutionnel: true, firm_id: firm.id)
+    end
+end
