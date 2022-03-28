@@ -119,3 +119,8 @@ Departement.create(zip_code: 95, name: "Val-d'Ois")
         LawTypesByFirm.create(constitutionnel: true, firm_id: firm.id)
     end
 end
+
+@firms = Firm.all
+@firms.each do |firm|
+    Appointment.create(firm_id: firm.id, start_date: (Time.now + 50000))
+end
