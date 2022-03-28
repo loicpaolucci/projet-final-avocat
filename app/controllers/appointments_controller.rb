@@ -14,7 +14,7 @@ class AppointmentsController < ApplicationController
     end
     
     def destroy
-        Appointment.find #A TRAVAILLER
+        Appointment.find(params[:id]).destroy
         redirect_to profil_index_path(1)
     end
 
