@@ -15,7 +15,7 @@ class AppointmentsController < ApplicationController
     
     def destroy
         Appointment.find(params[:firm_id].to_i).destroy
-        redirect_to profil_path(1)
+        redirect_to profil_path(current_user.id)
     end
 
     def update
