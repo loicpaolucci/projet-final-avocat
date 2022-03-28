@@ -1,7 +1,7 @@
 <body class="firm-body" style="padding-top : 150px;" >
   <% unless session[:new_firm].to_i == params[:id].to_i || (user_signed_in? && current_user.is_lawyer && current_user.firm_id == params[:id].to_i )%>
   <div class="image-text"><h1 style="font-size:5rem"><span style="color:#FFF; font-weight: 900"><%= @firm.name %></span></h1>
-    <p>Le meilleur des cabinets d' avocats!</p>
+    <p style="color : gold" >Le meilleur des cabinets d' avocats!</p>
     <div id="appointment-link">
       <ul>
         <li class="<%= @law_types.administratif ? "red-nav-link" : "collapse" %>">administratif</li>

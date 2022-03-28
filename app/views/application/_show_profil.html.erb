@@ -24,8 +24,8 @@
   </body>
 <% end %>
 <% if current_user.is_lawyer %>
-  <div class="row lawyer-profile">
-    <div class="col-lg-6 col-sm-12">
+  <div class="row lawyer-profile container ">
+    <div class="col-lg-7 col-sm-12">
         <h1>Mes rendez-vous</h1>
         <% @current_appointments.each do |appointment| %>
           Rendez-vous prévu le <%= appointment.start_date.day %> <%= Date::MONTHNAMES[appointment.start_date.month] %> à <%= appointment.start_date.hour %>h
@@ -33,15 +33,13 @@
           <p><% if appointment.is_confirmed %>Confirmé<% else %>Disponible<% end %></p>
         <% end %>
     </div>
-    <div class="col-lg-4 col-sm-12">
+    <div class="col-lg-5 col-sm-12">
+      <h2>Ajouter une disponibilité</h2><br><br>
       <%= form_with url: firm_appointments_path(current_user.firm_id), method: :post do |form| %>
-        <%= form.date_field :date %>
-        <%= form.time_field :time, :format=>"%H:%M" %>
-        <%= form.submit "Ajouter un rdv" %>
+        <%= form.date_field :date, class: "form-control" %><br>
+        <%= form.time_field :time, :format=>"%H:%M", class: "form-control" %><br>
+        <%= form.submit "Ajouter un rdv", class: "btn btn-outline-light" %><br>
       <% end %>
-    </div>
-    <div class="col-lg-2 col-sm-12">
-      blabla
     </div>
   </div>
 <% end %>

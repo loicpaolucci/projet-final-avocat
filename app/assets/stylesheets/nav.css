@@ -3,6 +3,12 @@
     padding : 0;
 }
 
+a:link, a:visited {
+    text-decoration: none;
+    transition: 0.5s ease-in-out;
+    color : whitesmoke;
+}
+
 .landing {
     background-image : url('petitefemme.jpg');
     background-size: cover;

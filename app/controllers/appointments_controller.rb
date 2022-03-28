@@ -14,8 +14,14 @@ class AppointmentsController < ApplicationController
     end
     
     def destroy
-        Appointment.find(params[:id]).destroy
-        redirect_to profil_index_path(1)
+        Appointment.find(params[:firm_id].to_i).destroy
+        redirect_to profil_path(1)
+    end
+
+    def update
+        @appointment = Appointment.find(params[:id].to_i)
+        @appointment.update(is_confirmed: !@appointment.is_confirmed)
+        redirect_to profil_path(current_user.id)
     end
 
     private
@@ -24,7 +30,8 @@ class AppointmentsController < ApplicationController
         params[:firm_id] = current_user.firm_id
         params[:is_confirmed] = false
         params[:is_paid] = false
+        params[:lawyer_id] = current_user.id
         params[:start_date] = (params[:date] + " " + params[:time]).to_datetime
-        params.permit(:start_date, :is_confirmed, :is_paid, :firm_id)
+        params.permit(:start_date, :is_confirmed, :is_paid, :firm_id, :lawyer_id)
     end
 end

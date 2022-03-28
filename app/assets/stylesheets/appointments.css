@@ -1,4 +1,8 @@
 .disponible-list {
-    height : 100px;
-    border : 1px solid skyblue;
+    height : 20vh;
+    color : whitesmoke;
+}
+
+.appointment {
+    margin-top : 20px;  
 }
