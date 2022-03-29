@@ -19,7 +19,7 @@
   border-radius : 30px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.274);
   background-color : rgba(245, 245, 245, 0.363);
-  color : lightgrey;
+  color : grey;
   outline-color: white;
 }
 
@@ -36,7 +36,7 @@
   border-radius : 30px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.274);
   background-color : rgba(245, 245, 245, 0.363);
-  color : white;
+  color : grey;
   outline-color: white;
 }
 
@@ -44,4 +44,9 @@
   outline : none;
   transition: 0.4s ease-in-out;
   transform: scale(1.02);
+}
+
+.btn-outline-light {
+  border-color: black;
+  color : black;
 }
