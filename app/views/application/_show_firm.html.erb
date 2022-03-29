@@ -7,7 +7,7 @@
     </div>
     <div class="col-md-4 col-sm-6 ">
       <ul>
-        <p class="text-dark">Types de droit exercés</p>
+      <p class="text-dark">Types de droit exercés</p>
         <li class="<%= @law_types.administratif ? "red-nav-link" : "collapse" %>">administratif</li>
         <li class="<%= @law_types.constitutionnel ? "red-nav-link" : "collapse" %>">constitutionnel</li>
         <li class="<%= @law_types.prive ? "red-nav-link" : "collapse" %>">prive</li>
@@ -16,17 +16,12 @@
         <li class="<%= @law_types.penal ? "red-nav-link" : "collapse" %>">penal</li>
         <li class="<%= @law_types.commercial ? "red-nav-link" : "collapse" %>">commercial</li>
         <li class="<%= @law_types.judiciaire ? "red-nav-link" : "collapse" %>">judiciaire</li>
-<<<<<<< HEAD
-      </ul!-->  
-       <%= link_to "Prendre un rendez-vous", firm_appointments_path(params[:id]), class: "btn btn-outline-danger red-btn", style:"color:black", remote: true %>
-=======
       </ul>
     </div>
     <div class="col-md-4 col-sm-6">
       <%= link_to "Prendre un rendez-vous", firm_appointments_path(params[:id]), class: "btn btn-outline-danger red-btn", style:"color:black", remote: true %>
       <div class="appointment-list">
       </div>
->>>>>>> 48c893f274d08e85a8d2d9f551f58babe2968253
     </div>
   </div>
   <% else %>
