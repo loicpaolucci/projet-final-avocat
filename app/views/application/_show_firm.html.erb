@@ -1,10 +1,13 @@
-<body class="firm-body" style="padding-top : 150px;" >
+<body style="padding-top : 150px;" >
   <% unless session[:new_firm].to_i == params[:id].to_i || (user_signed_in? && current_user.is_lawyer && current_user.firm_id == params[:id].to_i )%>
-  <div class="image-text"><h1 style="font-size:5rem"><span style="color:#black; font-weight: 900"><%= @firm.name %></span></h1>
-    <p style="color : gold" >Le meilleur des cabinets d' avocats!</p>
-    <p>Le meilleur des cabinets d'avocats!</p>
-    <div id="appointment-link">
+  <div class='row'  style="text-align : center; width : 100%; height : 200pw;">
+    <div class="col-12">
+      <h1 style="font-size:5rem"><span style="color:#black; font-weight: 900"><%= @firm.name %></span></h1>
+      <p class="text-muted" >Le meilleur des cabinets d' avocats!</p>
+    </div>
+    <div class="col-md-4 col-sm-6 ">
       <ul>
+        <p class="text-dark">Types de droit exercés</p>
         <li class="<%= @law_types.administratif ? "red-nav-link" : "collapse" %>">administratif</li>
         <li class="<%= @law_types.constitutionnel ? "red-nav-link" : "collapse" %>">constitutionnel</li>
         <li class="<%= @law_types.prive ? "red-nav-link" : "collapse" %>">prive</li>
@@ -13,8 +16,12 @@
         <li class="<%= @law_types.penal ? "red-nav-link" : "collapse" %>">penal</li>
         <li class="<%= @law_types.commercial ? "red-nav-link" : "collapse" %>">commercial</li>
         <li class="<%= @law_types.judiciaire ? "red-nav-link" : "collapse" %>">judiciaire</li>
-      </ul>  
+      </ul>
+    </div>
+    <div class="col-md-4 col-sm-6">
       <%= link_to "Prendre un rendez-vous", firm_appointments_path(params[:id]), class: "btn btn-outline-danger red-btn", style:"color:black", remote: true %>
+      <div class="appointment-list">
+      </div>
     </div>
   </div>
   <% else %>
