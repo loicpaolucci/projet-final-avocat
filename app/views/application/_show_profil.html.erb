@@ -38,7 +38,7 @@
       <%= form_with url: firm_appointments_path(current_user.firm_id), method: :post do |form| %>
         <%= form.date_field :date, class: "form-control" %><br>
         <%= form.time_field :time, :format=>"%H:%M", class: "form-control" %><br>
-        <%= form.submit "Ajouter un rdv", class: "btn btn-outline-light" %><br>
+        <%= form.submit "Ajouter un rdv", class: "btn btn-outline-dark" %><br>
       <% end %>
     </div>
   </div>
