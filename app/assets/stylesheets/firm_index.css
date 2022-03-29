@@ -1,5 +1,6 @@
 .my-row {
     width : 100vw;
+    
 }
 
 .form-control {
@@ -9,3 +10,4 @@
 .red-btn:hover {
     color: white !important;
   }
+
