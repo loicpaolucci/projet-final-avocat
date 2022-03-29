@@ -13,10 +13,10 @@
                 <li class="nav-item">
                     <a class="nav-link text-dark active" aria-current="page" href="/">Page principale</a>
                 </li>
-                <li class="nav-item" >
-                    <%= link_to "Prendre rendez-vous", new_menu_path, class: "nav-link text-dark active"%>
-                </li>
                 <% if user_signed_in? %>
+                    <li class="nav-item" >
+                        <%= link_to "Prendre rendez-vous", new_menu_path, class: "nav-link text-dark active"%>
+                    </li>
                     <li class="nav-item">
                         <%= link_to "Profil", profil_path(current_user.id), class: "nav-link text-dark active" %>
                     </li>
