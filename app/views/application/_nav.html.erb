@@ -32,8 +32,8 @@
                     </li>
                 <% end %>
             </ul>
-            <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Un département" aria-label="Search">
+            <form class="d-flex" action="/firms" method="get" >
+                <input class="form-control me-2" type="text" name="zip_code" id="zip_code" placeholder="Numéro de département " >
                 <button class="btn btn-outline-danger" type="submit">Rechercher</button>
             </form>
         </div>
