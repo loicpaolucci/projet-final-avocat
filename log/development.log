@@ -23325,3 +23325,77 @@ Processing by Devise::RegistrationsController#new as HTML
 Completed 200 OK in 79ms (Views: 77.6ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2022-03-29 16:54:45 +0200
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/larbi/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+Processing by MenuController#index as HTML
+  Rendering menu/index.html.erb within layouts/application
+  Rendered application/_landing.html.erb (0.5ms)
+  Rendered menu/index.html.erb within layouts/application (3.5ms)
+  Rendered application/_nav.html.erb (4.1ms)
+Completed 200 OK in 333ms (Views: 332.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/menu/new" for 127.0.0.1 at 2022-03-29 16:55:02 +0200
+Processing by MenuController#new as HTML
+  Rendering menu/new.html.erb within layouts/application
+  Rendered application/_rdv_search.html.erb (0.6ms)
+  Rendered menu/new.html.erb within layouts/application (2.2ms)
+  Rendered application/_nav.html.erb (2.4ms)
+Completed 200 OK in 84ms (Views: 83.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2022-03-29 16:55:07 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.6ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (405.9ms)
+  Rendered application/_nav.html.erb (2.3ms)
+Completed 200 OK in 495ms (Views: 459.7ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-29 16:55:13 +0200
+Processing by MenuController#index as HTML
+  Rendering menu/index.html.erb within layouts/application
+  Rendered application/_landing.html.erb (0.5ms)
+  Rendered menu/index.html.erb within layouts/application (2.4ms)
+  Rendered application/_nav.html.erb (3.5ms)
+Completed 200 OK in 65ms (Views: 64.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-29 16:56:06 +0200
+Processing by MenuController#index as HTML
+  Rendering menu/index.html.erb within layouts/application
+  Rendered application/_landing.html.erb (0.2ms)
+  Rendered menu/index.html.erb within layouts/application (1.1ms)
+  Rendered application/_nav.html.erb (4.0ms)
+Completed 200 OK in 52ms (Views: 50.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-29 16:56:22 +0200
+Processing by MenuController#index as HTML
+  Rendering menu/index.html.erb within layouts/application
+  Rendered application/_landing.html.erb (0.5ms)
+  Rendered menu/index.html.erb within layouts/application (4.9ms)
+  Rendered application/_nav.html.erb (1.9ms)
+Completed 200 OK in 75ms (Views: 74.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-29 16:56:23 +0200
+Processing by MenuController#index as HTML
+  Rendering menu/index.html.erb within layouts/application
+  Rendered application/_landing.html.erb (0.3ms)
+  Rendered menu/index.html.erb within layouts/application (1.3ms)
+  Rendered application/_nav.html.erb (1.4ms)
+Completed 200 OK in 51ms (Views: 50.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-29 16:56:34 +0200
+Processing by MenuController#index as HTML
+  Rendering menu/index.html.erb within layouts/application
+  Rendered application/_landing.html.erb (0.3ms)
+  Rendered menu/index.html.erb within layouts/application (1.5ms)
+  Rendered application/_nav.html.erb (3.0ms)
+Completed 200 OK in 51ms (Views: 50.3ms | ActiveRecord: 0.0ms)
+
+
