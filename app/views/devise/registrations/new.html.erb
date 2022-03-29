@@ -2,7 +2,7 @@
 <div class="container" style="padding-top : 150px;" >
   <div class="row">
   <div class="col-lg-6 col-sm-12 form-div" >
-    <h2>Vous êtres utilisateur ?</h2>
+    <h2>Vous êtes un utilisateur ?</h2>
 
     <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
       <%= f.error_notification %>
@@ -10,20 +10,20 @@
         <%= f.input :email,
                 required: true,
                 autofocus: true,
-                input_html: { autocomplete: "email", class: "my-lawyer-input" } %>
+                input_html: { autocomplete: "email", placeholder: "exemple@mail.com", class: "my-lawyer-input" } %><br>
         <%= f.input :password,
                 required: true,
                 hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                input_html: { autocomplete: "new-password", class: "my-lawyer-input" } %>
+                input_html: { autocomplete: "new-password", placeholder: "Écrivez votre mot de passe", class: "my-lawyer-input" } %><br>
         <%= f.input :password_confirmation,
                 required: true,
-                input_html: { autocomplete: "new-password", class: "my-lawyer-input" } %>
+                input_html: { autocomplete: "new-password", placeholder: "Confirmez votre mot de passe", class: "my-lawyer-input" } %>
       </div>
 
       <div class="form-actions">
         <br>
-        <%= f.button :submit, "Sign up", class: "btn btn-light" %>
-      </div>
+        <%= f.button :submit, "S'enregister", class: "btn btn-sm btn-danger" %>
+      </div><br>
     <% end %>
 
     <%= render "devise/shared/links" %>
@@ -33,11 +33,11 @@
     <div class="form-inputs container">
     <%= form_with url: firms_path, method: :post do |form| %>
       <div>
-        <%= form.label :firm_name, "cabinet d'avocat" %><br>
-        <%= form.text_field :name ,placeholder: "Lantier Asoocié", required: true, class: "my-lawyer-input" %>
+        <%= form.label :firm_name, "Cabinet d'avocat" %>
+        <%= form.text_field :name ,placeholder: "Lantier Asoocié", required: true, class: "my-lawyer-input" %><br><br>
       </div>
       <div>
-        <%= form.label :firm_zip, "Departement" %><br>
+        <%= form.label :firm_zip, "Département" %>
         <%= form.select :departement_id, 
             [["01 - Ain", 1],          
             ["02 - Aisne", 2],          
@@ -134,23 +134,22 @@
             ["92 - Hauts-de-seine", 92],          
             ["93 - Seine-Saint-Denis", 93],          
             ["94 - Val-de-marne", 94],          
-            ["95 - Val-d'Oise", 95]] %>
+            ["95 - Val-d'Oise", 95]] %><br><br>
       </div>
       <div>
-        <%= form.label :address, "Adresse" %><br>
-        <%= form.text_field :address, placeholder: "14 rue Victor Hugo 75016 Paris", required: true, class: "my-lawyer-input" %>
+        <%= form.label :address, "Adresse" %>
+        <%= form.text_field :address, placeholder: "14 rue Victor Hugo 75016 Paris", required: true, class: "my-lawyer-input" %><br><br>
       </div>
       <div>
-        <%= form.label :email,"email" %><br>
-        <%= form.text_field :email, placeholder: "example@email.com", required: true,  class: "my-lawyer-input" %>
+        <%= form.label :email,"Email" %>
+        <%= form.text_field :email, placeholder: "exemple@email.com", required: true,  class: "my-lawyer-input" %><br><br>
       </div>
       <div>
-        <%= form.label :telephone,"Numéro de téléphone" %><br>
-        <%= form.text_field :phone_number, placeholder: "+33xxxxxxxxx", required: true,  class: "my-lawyer-input" %>
+        <%= form.label :telephone,"Numéro de téléphone" %>
+        <%= form.text_field :phone_number, placeholder: "+33xxxxxxxxx", required: true,  class: "my-lawyer-input" %><br><br>
       </div>
       <div>
-        <br>
-        <%= form.submit "S'enregistrer", class: "btn btn-light"%>
+        <%= form.submit "S'enregistrer", class: "btn btn-sm btn-danger"%>
       </div>
     <% end %>
     </div>
