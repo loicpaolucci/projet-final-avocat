@@ -1,2 +1,2 @@
-document.getElementById("appointment-link").remove()
-document.getElementsByClassName("image-text")[0].insertAdjacentHTML("beforeend", "<%= j render 'take_rdv_list', appointments: @appointments %>")
+if (document.getElementsByClassName("disponible-list")) {document.getElementsByClassName("disponible-list")[0].remove()}
+document.getElementsByClassName("appointment-list")[0].insertAdjacentHTML("beforeend", "<%= j render 'take_rdv_list', appointments: @appointments %>")

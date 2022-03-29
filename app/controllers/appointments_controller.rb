@@ -10,6 +10,7 @@ class AppointmentsController < ApplicationController
     def create
         @appointment = Appointment.new(post_params)
         if @appointment.save
+            redirect_to profil_path(current_user.id)
         end
     end
     
