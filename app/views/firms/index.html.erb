@@ -111,7 +111,7 @@
             <div class="card text-center">
                 <div class="card-body">
                     <h5 class="card-title"><%= firm.name %></h5>
-                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    <p class="card-text">Pour nous contacter : par téléphone <%= firm.email %> ou par email :  <%= firm.phone_number %></p>
                     <a href="<%= firm_path(firm.id)%>" class="btn btn-sm btn-danger">Voir le cabinet</a>
                 </div>
                 <div class="card-footer text-muted">
