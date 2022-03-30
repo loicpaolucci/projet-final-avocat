@@ -24737,3 +24737,60 @@ Processing by FirmsController#show as HTML
 Completed 200 OK in 178ms (Views: 123.4ms | ActiveRecord: 33.3ms)
 
 
+Started GET "/menu/new" for ::1 at 2022-03-30 16:39:03 +0200
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/paolucciloic/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+Processing by MenuController#new as HTML
+  Rendering menu/new.html.erb within layouts/application
+  Rendered application/_rdv_search.html.erb (0.2ms)
+  Rendered menu/new.html.erb within layouts/application (1.4ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/application/_nav.html.erb:16
+  Rendered application/_nav.html.erb (18.0ms)
+Completed 200 OK in 446ms (Views: 440.8ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/" for ::1 at 2022-03-30 16:39:05 +0200
+Processing by MenuController#index as HTML
+  Rendering menu/index.html.erb within layouts/application
+  Rendered application/_landing.html.erb (0.3ms)
+  Rendered menu/index.html.erb within layouts/application (2.3ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/application/_nav.html.erb:16
+  Rendered application/_nav.html.erb (2.7ms)
+Completed 200 OK in 38ms (Views: 36.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2022-03-30 16:39:50 +0200
+Processing by MenuController#index as HTML
+  Rendering menu/index.html.erb within layouts/application
+  Rendered application/_landing.html.erb (0.5ms)
+  Rendered menu/index.html.erb within layouts/application (4.3ms)
+  [1m[36mUser Load (4.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/application/_nav.html.erb:16
+  Rendered application/_nav.html.erb (6.5ms)
+Completed 200 OK in 57ms (Views: 51.7ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/" for ::1 at 2022-03-30 16:40:27 +0200
+Processing by MenuController#index as HTML
+  Rendering menu/index.html.erb within layouts/application
+  Rendered application/_landing.html.erb (0.6ms)
+  Rendered menu/index.html.erb within layouts/application (2.6ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/application/_nav.html.erb:16
+  Rendered application/_nav.html.erb (2.3ms)
+Completed 200 OK in 48ms (Views: 46.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2022-03-30 16:40:52 +0200
+Processing by MenuController#index as HTML
+  Rendering menu/index.html.erb within layouts/application
+  Rendered application/_landing.html.erb (0.6ms)
+  Rendered menu/index.html.erb within layouts/application (2.9ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/application/_nav.html.erb:16
+  Rendered application/_nav.html.erb (2.6ms)
+Completed 200 OK in 47ms (Views: 45.4ms | ActiveRecord: 0.5ms)
+
+
