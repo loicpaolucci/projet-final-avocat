@@ -122,5 +122,5 @@ require 'faker'
 
 @firms = Firm.all
 @firms.each do |firm|
-    Appointment.create(firm_id: firm.id, start_date: (Time.now + 50000))
+    Appointment.create(firm_id: firm.id, start_date: (Time.now + 500000))
 end
