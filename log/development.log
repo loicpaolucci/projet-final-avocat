@@ -28644,3 +28644,465 @@ Processing by FirmsController#show as HTML
 Completed 200 OK in 178ms (Views: 123.4ms | ActiveRecord: 33.3ms)
 
 
+Started GET "/" for 127.0.0.1 at 2022-03-30 16:35:32 +0200
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/larbi/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+Processing by MenuController#index as HTML
+  Rendering menu/index.html.erb within layouts/application
+  Rendered application/_landing.html.erb (0.5ms)
+  Rendered menu/index.html.erb within layouts/application (2.3ms)
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/application/_nav.html.erb:16
+  Rendered application/_nav.html.erb (29.5ms)
+Completed 200 OK in 370ms (Views: 361.1ms | ActiveRecord: 6.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-30 16:35:35 +0200
+Processing by MenuController#index as HTML
+  Rendering menu/index.html.erb within layouts/application
+  Rendered application/_landing.html.erb (0.9ms)
+  Rendered menu/index.html.erb within layouts/application (3.6ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/application/_nav.html.erb:16
+  Rendered application/_nav.html.erb (4.5ms)
+Completed 200 OK in 59ms (Views: 57.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/firms/1" for 127.0.0.1 at 2022-03-30 16:35:44 +0200
+Processing by FirmsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFirm Load (0.5ms)[0m  [1m[34mSELECT  "firms".* FROM "firms" WHERE "firms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/firms_controller.rb:15
+  [1m[36mLawTypesByFirm Load (0.9ms)[0m  [1m[34mSELECT  "law_types_by_firms".* FROM "law_types_by_firms" WHERE "law_types_by_firms"."firm_id" = $1 LIMIT $2[0m  [["firm_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/firms_controller.rb:16
+  Rendering firms/show.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/application/_show_firm.html.erb:2
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/application/_show_firm.html.erb:44
+  [1m[36mFirm Load (0.3ms)[0m  [1m[34mSELECT  "firms".* FROM "firms" WHERE "firms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/application/_show_firm.html.erb:52
+  [1m[36mCACHE Firm Load (0.0ms)[0m  [1m[34mSELECT  "firms".* FROM "firms" WHERE "firms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/application/_show_firm.html.erb:52
+  Rendered application/_show_firm.html.erb (21.2ms)
+  Rendered firms/show.html.erb within layouts/application (24.5ms)
+  Rendered application/_nav.html.erb (2.0ms)
+Completed 200 OK in 144ms (Views: 106.1ms | ActiveRecord: 17.4ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2022-03-30 16:35:54 +0200
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ARoqycqIT4NwQJcA+xuQad8jr1De/zy0vOq3N9m8LOFKNtgOiaQYYEa5j8Rx2FxIPwssg7AYA8KTyEACfXeaPw=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/larbi/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/larbi/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/larbi/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 332ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-30 16:35:54 +0200
+Processing by MenuController#index as HTML
+  Rendering menu/index.html.erb within layouts/application
+  Rendered application/_landing.html.erb (0.2ms)
+  Rendered menu/index.html.erb within layouts/application (1.1ms)
+  Rendered application/_nav.html.erb (8.3ms)
+Completed 200 OK in 68ms (Views: 67.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-03-30 16:36:20 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (31.7ms)
+  Rendered application/_nav.html.erb (2.5ms)
+Completed 200 OK in 114ms (Views: 102.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2022-03-30 16:36:22 +0200
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"itZcBonTUwdyOXZRmbdaXmbcXv7eDEPnqQIAW9t0cVrhjenlPDt/KSmxmRuPiN0UNr0x2wlTFMgRKuB/so+awA==", "user"=>{"email"=>"larbi.ah@outlook.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Se connecter"}
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "larbi.ah@outlook.com"], ["LIMIT", 1]]
+  ↳ /home/larbi/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 305ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-30 16:36:23 +0200
+Processing by MenuController#index as HTML
+  Rendering menu/index.html.erb within layouts/application
+  Rendered application/_landing.html.erb (0.5ms)
+  Rendered menu/index.html.erb within layouts/application (1.6ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/application/_nav.html.erb:16
+  Rendered application/_nav.html.erb (3.7ms)
+Completed 200 OK in 63ms (Views: 62.4ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2022-03-30 16:36:29 +0200
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"VcBoDneAyjcJRPotqmZa4zpKjKuuN41uTx71nHo/Lq7NFy0P9FojLPK7toRnVxZ2CwqQSjpcK0svUoNSP0ZacQ=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/larbi/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/larbi/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/larbi/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 9ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-30 16:36:30 +0200
+Processing by MenuController#index as HTML
+  Rendering menu/index.html.erb within layouts/application
+  Rendered application/_landing.html.erb (0.4ms)
+  Rendered menu/index.html.erb within layouts/application (1.8ms)
+  Rendered application/_nav.html.erb (3.0ms)
+Completed 200 OK in 54ms (Views: 53.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-03-30 16:36:32 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (15.5ms)
+  Rendered application/_nav.html.erb (2.4ms)
+Completed 200 OK in 73ms (Views: 72.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2022-03-30 16:36:43 +0200
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PAFRgTMZizsDgpCyymX0vQbC3B1AjwzCuZ2SQ5fK23sazNhVe5ppZdzCcg8B0Qckdnhhofb0h/RQmudFQ5+H8g==", "user"=>{"email"=>"jeanmouloud@yopmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Se connecter"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "jeanmouloud@yopmail.com"], ["LIMIT", 1]]
+  ↳ /home/larbi/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+Completed 401 Unauthorized in 6ms (ActiveRecord: 0.5ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PAFRgTMZizsDgpCyymX0vQbC3B1AjwzCuZ2SQ5fK23sazNhVe5ppZdzCcg8B0Qckdnhhofb0h/RQmudFQ5+H8g==", "user"=>{"email"=>"jeanmouloud@yopmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Se connecter"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (9.4ms)
+  Rendered application/_nav.html.erb (2.9ms)
+Completed 200 OK in 394ms (Views: 91.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2022-03-30 16:36:51 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.2ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (29.8ms)
+  Rendered application/_nav.html.erb (1.5ms)
+Completed 200 OK in 95ms (Views: 94.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2022-03-30 16:36:56 +0200
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sbOJ+2JU7fJfMy/NJhpGU267qsL/MyZcEH/5DJY80JuXfgAvKtcPrIBzzXDtrrXKHgEXfklIrWr5eIwKQmmMEg==", "user"=>{"email"=>"larbi.ah@outlook.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"S'enregister"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/larbi/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "larbi.ah@outlook.com"], ["LIMIT", 1]]
+  ↳ /home/larbi/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ /home/larbi/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (21.8ms)
+  Rendered application/_nav.html.erb (2.3ms)
+Completed 200 OK in 365ms (Views: 75.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-03-30 16:37:00 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (13.1ms)
+  Rendered application/_nav.html.erb (2.1ms)
+Completed 200 OK in 71ms (Views: 69.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2022-03-30 16:37:02 +0200
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hoglfikQLUJjks48aHNiwcODKjb2qEiAj9gD3+zWojmgRayqYZPPHLzSLIGjx5FYszmXikDTw7Zm33bZOIP+sA==", "user"=>{"email"=>"larbi.ah@outlook.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Se connecter"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "larbi.ah@outlook.com"], ["LIMIT", 1]]
+  ↳ /home/larbi/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 318ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-30 16:37:02 +0200
+Processing by MenuController#index as HTML
+  Rendering menu/index.html.erb within layouts/application
+  Rendered application/_landing.html.erb (0.2ms)
+  Rendered menu/index.html.erb within layouts/application (1.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/application/_nav.html.erb:16
+  Rendered application/_nav.html.erb (3.3ms)
+Completed 200 OK in 48ms (Views: 46.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/profil/1" for 127.0.0.1 at 2022-03-30 16:37:05 +0200
+Processing by ProfilController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:3
+  [1m[36mAppointment Load (0.8ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments"[0m
+  ↳ app/helpers/profil_helper.rb:4
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 5.3ms)
+
+
+  
+NoMethodError (undefined method `>' for nil:NilClass):
+  
+app/helpers/profil_helper.rb:5:in `block in user_appointments'
+app/helpers/profil_helper.rb:4:in `user_appointments'
+app/controllers/profil_controller.rb:10:in `show'
+Started GET "/firms/1" for 127.0.0.1 at 2022-03-30 16:37:12 +0200
+Processing by FirmsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFirm Load (0.3ms)[0m  [1m[34mSELECT  "firms".* FROM "firms" WHERE "firms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/firms_controller.rb:15
+  [1m[36mLawTypesByFirm Load (0.2ms)[0m  [1m[34mSELECT  "law_types_by_firms".* FROM "law_types_by_firms" WHERE "law_types_by_firms"."firm_id" = $1 LIMIT $2[0m  [["firm_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/firms_controller.rb:16
+  Rendering firms/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/application/_show_firm.html.erb:2
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/application/_show_firm.html.erb:44
+  [1m[36mFirm Load (1.0ms)[0m  [1m[34mSELECT  "firms".* FROM "firms" WHERE "firms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/application/_show_firm.html.erb:52
+  [1m[36mCACHE Firm Load (0.0ms)[0m  [1m[34mSELECT  "firms".* FROM "firms" WHERE "firms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/application/_show_firm.html.erb:52
+  Rendered application/_show_firm.html.erb (24.9ms)
+  Rendered firms/show.html.erb within layouts/application (29.7ms)
+  Rendered application/_nav.html.erb (1.5ms)
+Completed 200 OK in 88ms (Views: 83.8ms | ActiveRecord: 2.3ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2022-03-30 16:37:17 +0200
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"0fQyzsK/mRFoBdoF0HWzBAB0ZQDLC//6f1lfzWLPW9Ux5hcQwML03BZm/K/zl1BSH14oYFpkI9Q8cNSgNgEGTg=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/larbi/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/larbi/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/larbi/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-30 16:37:17 +0200
+Processing by MenuController#index as HTML
+  Rendering menu/index.html.erb within layouts/application
+  Rendered application/_landing.html.erb (0.8ms)
+  Rendered menu/index.html.erb within layouts/application (3.6ms)
+  Rendered application/_nav.html.erb (2.4ms)
+Completed 200 OK in 70ms (Views: 69.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-03-30 16:37:20 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (11.2ms)
+  Rendered application/_nav.html.erb (2.4ms)
+Completed 200 OK in 61ms (Views: 59.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2022-03-30 16:37:23 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.2ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (25.8ms)
+  Rendered application/_nav.html.erb (2.0ms)
+Completed 200 OK in 75ms (Views: 74.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2022-03-30 16:39:39 +0200
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bZPzcylVSvT6C+nuthORRoWFiKmBYM5ibYgJ/1DBedCkp0MJUKsp3JfAL80CUdQULUGNV2+INsY2BbnC6Ho+cw==", "user"=>{"email"=>"jeanclaude@yopmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"S'enregister"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/larbi/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jeanclaude@yopmail.com"], ["LIMIT", 1]]
+  ↳ /home/larbi/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "jeanclaude@yopmail.com"], ["encrypted_password", "$2a$12$SpyFNo4g7Rqd1jLQ/q7v8O4eG0k0RxP5Ko71xpYqdkK.zL7sTsM.W"], ["created_at", "2022-03-30 14:39:39.329146"], ["updated_at", "2022-03-30 14:39:39.329146"]]
+  ↳ /home/larbi/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+  Rendering user_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.html.erb within layouts/mailer (0.6ms)
+  Rendering user_mailer/welcome_email.text.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.text.erb within layouts/mailer (0.8ms)
+UserMailer#welcome_email: processed outbound mail in 42.6ms
+Sent mail to jeanclaude@yopmail.com (278.2ms)
+Date: Wed, 30 Mar 2022 16:39:39 +0200
+From: no-reply@monsite.fr
+To: jeanclaude@yopmail.com
+Message-ID: <62446bab5ec20_9a2e5c30391e0@larbi.mail>
+Subject: Bienvenue chez nous !
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_62446bab5dd7c_9a2e5c303906b";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_62446bab5dd7c_9a2e5c303906b
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: base64
+
+DQo9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09
+PT09PT09PT09PT09PT09DQoNClR1IHQnZXMgaW5zY3JpdCBzdXIgbW9uc2l0
+ZS5mciBlbiB1dGlsaXNhbnQgbCdlLW1haWwgc3VpdmFudCA6IGplYW5jbGF1
+ZGVAeW9wbWFpbC5jb20uDQoNClBvdXIgYWNjw6lkZXIgw6AgdG9uIGVzcGFj
+ZSBjbGllbnQsIGNvbm5lY3RlLXRvaSB2aWEgOiBodHRwOi8vbW9uc2l0ZS5m
+ci9sb2dpbi4NCg0Kw4AgdHLDqHMgdml0ZSBzdXIgbW9uc2l0ZS5mciAhDQo=
+
+----==_mimepart_62446bab5dd7c_9a2e5c303906b
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>=0D
+<html>=0D
+  <head>=0D
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf=
+-8" />=0D
+    <style>=0D
+      /* Email styles need to be inline */=0D
+    </style>=0D
+  </head>=0D
+=0D
+  <body>=0D
+    <!DOCTYPE html>=0D
+<html>=0D
+    <head>=0D
+        <meta content=3D'text/html; charset=3DUTF-8' http-equiv=3D'Conten=
+t-Type' />=0D
+    </head>=0D
+    <body>=0D
+        <p>=0D
+            Tu t'es inscrit sur monsite.fr en utilisant l'e-mail suivant =
+: jeanclaude@yopmail.com.=0D
+        </p>=0D
+        <p>=0D
+            Pour acc=C3=A9der =C3=A0 ton espace client, connecte-toi via =
+: http://monsite.fr/login.=0D
+        </p>=0D
+        <p> =C3=80 tr=C3=A8s vite sur monsite.fr !=0D
+    </body>=0D
+</html>=0D
+  </body>=0D
+</html>=0D
+
+----==_mimepart_62446bab5dd7c_9a2e5c303906b--
+
+  [1m[35m (12.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/larbi/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 634ms (ActiveRecord: 13.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-30 16:39:39 +0200
+Processing by MenuController#index as HTML
+  Rendering menu/index.html.erb within layouts/application
+  Rendered application/_landing.html.erb (0.4ms)
+  Rendered menu/index.html.erb within layouts/application (1.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/application/_nav.html.erb:16
+  Rendered application/_nav.html.erb (3.6ms)
+Completed 200 OK in 58ms (Views: 57.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/menu/new" for 127.0.0.1 at 2022-03-30 16:39:43 +0200
+Processing by MenuController#new as HTML
+  Rendering menu/new.html.erb within layouts/application
+  Rendered application/_rdv_search.html.erb (0.4ms)
+  Rendered menu/new.html.erb within layouts/application (1.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/application/_nav.html.erb:16
+  Rendered application/_nav.html.erb (3.1ms)
+Completed 200 OK in 61ms (Views: 60.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/firms?zip_code=1" for 127.0.0.1 at 2022-03-30 16:39:46 +0200
+Processing by FirmsController#index as JS
+  Parameters: {"zip_code"=>"1"}
+  [1m[36mDepartement Load (0.6ms)[0m  [1m[34mSELECT  "departements".* FROM "departements" WHERE "departements"."zip_code" = $1 LIMIT $2[0m  [["zip_code", "1"], ["LIMIT", 1]]
+  ↳ app/controllers/firms_controller.rb:6
+  Rendering firms/index.js.erb
+  [1m[36mFirm Load (1.3ms)[0m  [1m[34mSELECT "firms".* FROM "firms"[0m
+  ↳ app/views/application/_firm_list.html.erb:3
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/application/_firm_list.html.erb:10
+  Rendered application/_firm_list.html.erb (18.0ms)
+  Rendered firms/index.js.erb (21.1ms)
+Completed 200 OK in 63ms (Views: 23.9ms | ActiveRecord: 11.7ms)
+
+
+Started GET "/firms/2" for 127.0.0.1 at 2022-03-30 16:39:51 +0200
+Processing by FirmsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mFirm Load (0.6ms)[0m  [1m[34mSELECT  "firms".* FROM "firms" WHERE "firms"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/firms_controller.rb:15
+  [1m[36mLawTypesByFirm Load (0.6ms)[0m  [1m[34mSELECT  "law_types_by_firms".* FROM "law_types_by_firms" WHERE "law_types_by_firms"."firm_id" = $1 LIMIT $2[0m  [["firm_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/firms_controller.rb:16
+  Rendering firms/show.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/application/_show_firm.html.erb:2
+  Rendered application/_show_firm.html.erb (5.0ms)
+  Rendered firms/show.html.erb within layouts/application (7.7ms)
+  Rendered application/_nav.html.erb (1.8ms)
+Completed 200 OK in 84ms (Views: 55.3ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/firms/2/appointments" for 127.0.0.1 at 2022-03-30 16:39:53 +0200
+Processing by AppointmentsController#index as JS
+  Parameters: {"firm_id"=>"2"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:3
+  Rendering appointments/index.js.erb
+  [1m[36mAppointment Load (0.8ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments"[0m
+  ↳ app/views/application/_take_rdv_list.html.erb:2
+  Rendered application/_take_rdv_list.html.erb (9.8ms)
+  Rendered appointments/index.js.erb (11.4ms)
+Completed 200 OK in 22ms (Views: 15.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-30 16:40:08 +0200
+Processing by MenuController#index as HTML
+  Rendering menu/index.html.erb within layouts/application
+  Rendered application/_landing.html.erb (1.4ms)
+  Rendered menu/index.html.erb within layouts/application (3.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/application/_nav.html.erb:16
+  Rendered application/_nav.html.erb (2.3ms)
+Completed 200 OK in 49ms (Views: 47.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-30 16:45:42 +0200
+Processing by MenuController#index as HTML
+  Rendering menu/index.html.erb within layouts/application
+  Rendered application/_landing.html.erb (0.4ms)
+  Rendered menu/index.html.erb within layouts/application (1.6ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/application/_nav.html.erb:16
+  Rendered application/_nav.html.erb (4.8ms)
+Completed 200 OK in 51ms (Views: 49.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-30 16:46:06 +0200
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/larbi/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+Processing by MenuController#index as HTML
+  Rendering menu/index.html.erb within layouts/application
+  Rendered application/_landing.html.erb (1.5ms)
+  Rendered menu/index.html.erb within layouts/application (3.6ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/application/_nav.html.erb:16
+  Rendered application/_nav.html.erb (24.5ms)
+Completed 200 OK in 276ms (Views: 269.3ms | ActiveRecord: 5.5ms)
+
+
