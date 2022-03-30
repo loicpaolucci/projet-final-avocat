@@ -24794,3 +24794,36 @@ Processing by MenuController#index as HTML
 Completed 200 OK in 47ms (Views: 45.4ms | ActiveRecord: 0.5ms)
 
 
+Started GET "/presentation" for ::1 at 2022-03-30 16:42:09 +0200
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/paolucciloic/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+Processing by PresentationController#index as HTML
+  Rendering presentation/index.html.erb within layouts/application
+  Rendered presentation/index.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/application/_nav.html.erb:16
+  Rendered application/_nav.html.erb (81.7ms)
+Completed 200 OK in 163ms (Views: 88.1ms | ActiveRecord: 73.8ms)
+
+
+Started GET "/presentation" for ::1 at 2022-03-30 16:42:49 +0200
+Processing by PresentationController#index as HTML
+  Rendering presentation/index.html.erb within layouts/application
+  Rendered presentation/index.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/application/_nav.html.erb:16
+  Rendered application/_nav.html.erb (2.7ms)
+Completed 200 OK in 40ms (Views: 38.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2022-03-30 16:42:59 +0200
+Processing by MenuController#index as HTML
+  Rendering menu/index.html.erb within layouts/application
+  Rendered application/_landing.html.erb (0.3ms)
+  Rendered menu/index.html.erb within layouts/application (2.4ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/application/_nav.html.erb:16
+  Rendered application/_nav.html.erb (2.4ms)
+Completed 200 OK in 29ms (Views: 28.0ms | ActiveRecord: 0.5ms)
+
+
