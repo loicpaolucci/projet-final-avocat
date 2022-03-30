@@ -1,6 +1,6 @@
 .my-row {
-    border : solid yellow;
     width : 100vw;
+    
 }
 
 .form-control {
@@ -10,3 +10,4 @@
 .red-btn:hover {
     color: white !important;
   }
+

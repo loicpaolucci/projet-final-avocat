@@ -1,7 +1,11 @@
 class FirmsController < ApplicationController
     def index
+        if params[:zip_code].to_i == 0
+            params[:zip_code] = 1
+        end
         @zip_id = Departement.find_by(zip_code: params[:zip_code]).id
         respond_to do |format|
+            format.html { }
             format.js { }
         end
     end

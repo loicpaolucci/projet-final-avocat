@@ -1,4 +1,23 @@
+.footer{
+    background:#CA0707;
+    position:fixed;
+    left:0px;
+    bottom:0px;
+    height:50px;
+    width:100%;
+}
+
 .container {
   font-family: 'AnjaliOldLipi', "sans-serif";
   color: #CA0707;
+}
+
+.jumbotron {
+  background-image: url("https://images-ext-1.discordapp.net/external/8ovYYNGWONMLD0GoeCoJPTgmcugdeuPKnQ379q1uJ1w/http/apps.hyblab.fr/ddj2019/region-pdl-audio/img/marteau.gif");
+  height: 80vh;
+  line-height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
 }

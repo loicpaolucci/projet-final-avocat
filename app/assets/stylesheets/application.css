@@ -20,4 +20,9 @@
  *=require show_profil
  *=require appointments
  *=require landing
+ *=require presentation_index
  */
+
+ * {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
