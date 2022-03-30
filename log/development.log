@@ -23325,7 +23325,6 @@ Processing by Devise::RegistrationsController#new as HTML
 Completed 200 OK in 79ms (Views: 77.6ms | ActiveRecord: 0.0ms)
 
 
-<<<<<<< HEAD
 Started GET "/" for 127.0.0.1 at 2022-03-29 16:54:45 +0200
   [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ /home/larbi/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
@@ -24158,7 +24157,6 @@ Processing by PresentationController#index as HTML
   Rendered presentation/index.html.erb within layouts/application (0.8ms)
   Rendered application/_nav.html.erb (1.4ms)
 Completed 200 OK in 45ms (Views: 44.8ms | ActiveRecord: 0.0ms)
-=======
 Started GET "/" for ::1 at 2022-03-29 11:12:03 +0200
   [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ /Users/paolucciloic/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
@@ -29093,7 +29091,6 @@ Processing by ProfilController#show as HTML
   Rendered profil/show.html.erb within layouts/application (4.4ms)
   Rendered application/_nav.html.erb (3.4ms)
 Completed 200 OK in 131ms (Views: 90.5ms | ActiveRecord: 4.5ms)
->>>>>>> 3b62f6dd3b290641bfdcde834172aa6d0ab11f12
 
 
 Started GET "/" for 127.0.0.1 at 2022-03-30 15:19:19 +0200
@@ -29477,5 +29474,27 @@ Processing by FirmsController#show as HTML
   Rendered firms/show.html.erb within layouts/application (10.3ms)
   Rendered application/_nav.html.erb (5.3ms)
 Completed 200 OK in 178ms (Views: 123.4ms | ActiveRecord: 33.3ms)
+
+
+Started GET "/firms/1315" for 127.0.0.1 at 2022-03-30 16:01:34 +0200
+Processing by FirmsController#show as HTML
+  Parameters: {"id"=>"1315"}
+  [1m[36mFirm Load (1.2ms)[0m  [1m[34mSELECT  "firms".* FROM "firms" WHERE "firms"."id" = $1 LIMIT $2[0m  [["id", 1315], ["LIMIT", 1]]
+  ↳ app/controllers/firms_controller.rb:15
+  [1m[36mLawTypesByFirm Load (0.8ms)[0m  [1m[34mSELECT  "law_types_by_firms".* FROM "law_types_by_firms" WHERE "law_types_by_firms"."firm_id" = $1 LIMIT $2[0m  [["firm_id", 1315], ["LIMIT", 1]]
+  ↳ app/controllers/firms_controller.rb:16
+  Rendering firms/show.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/application/_show_firm.html.erb:2
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/application/_show_firm.html.erb:44
+  [1m[36mFirm Load (0.3ms)[0m  [1m[34mSELECT  "firms".* FROM "firms" WHERE "firms"."id" = $1 LIMIT $2[0m  [["id", 1315], ["LIMIT", 1]]
+  ↳ app/views/application/_show_firm.html.erb:52
+  [1m[36mCACHE Firm Load (0.0ms)[0m  [1m[34mSELECT  "firms".* FROM "firms" WHERE "firms"."id" = $1 LIMIT $2[0m  [["id", 1315], ["LIMIT", 1]]
+  ↳ app/views/application/_show_firm.html.erb:52
+  Rendered application/_show_firm.html.erb (13.0ms)
+  Rendered firms/show.html.erb within layouts/application (15.2ms)
+  Rendered application/_nav.html.erb (1.6ms)
+Completed 200 OK in 67ms (Views: 52.0ms | ActiveRecord: 3.9ms)
 
 
