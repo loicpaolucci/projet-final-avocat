@@ -13,10 +13,10 @@
                 <li class="nav-item">
                     <a class="nav-link text-dark active" aria-current="page" href="/">Page principale</a>
                 </li>
-                <li class="nav-item" >
-                    <%= link_to "Prendre rendez-vous", new_menu_path, class: "nav-link text-dark active"%>
-                </li>
                 <% if user_signed_in? %>
+                    <li class="nav-item" >
+                        <%= link_to "Prendre rendez-vous", new_menu_path, class: "nav-link text-dark active"%>
+                    </li>
                     <li class="nav-item">
                         <%= link_to "Profil", profil_path(current_user.id), class: "nav-link text-dark active" %>
                     </li>
@@ -32,9 +32,9 @@
                     </li>
                 <% end %>
             </ul>
-            <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Un département" aria-label="Search">
-                <button class= "btn btn-sm btn-danger" type="submit">Rechercher</button>
+            <form class="d-flex" action="/firms" method="get" >
+                <input class="form-control me-2" type="text" name="zip_code" id="zip_code" placeholder="Numéro de département " >
+                <button class="btn btn-outline-danger" type="submit">Rechercher</button>
             </form>
         </div>
     </div>
