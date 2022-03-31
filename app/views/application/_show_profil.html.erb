@@ -12,7 +12,9 @@
           </div>
           <div class="modal-body">
             <% @current_appointments.each do |appointment|%>
-              Rendez-vous prévu le <%= appointment.start_date.day %> <%= Date::MONTHNAMES[appointment.start_date.month] %> à <%= appointment.start_date.hour %>h
+              Rendez-vous prévu le <%= appointment.start_date.day %> <%= Date::MONTHNAMES[appointment.start_date.month] %> à <%= appointment.start_date.hour %>h 
+                      <%= link_to "Annuler" , firm_appointment_path(appointment.id), method: :delete, class: "btn btn-sm btn-outline-danger text-dark" %><br>
+
             <% end %>
           </div>
           <div class="modal-footer">
