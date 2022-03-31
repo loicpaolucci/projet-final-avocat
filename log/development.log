@@ -29346,3 +29346,14 @@ Processing by MenuController#index as HTML
 Completed 200 OK in 75ms (Views: 73.4ms | ActiveRecord: 0.7ms)
 
 
+Started GET "/" for 127.0.0.1 at 2022-03-31 11:24:52 +0200
+Processing by MenuController#index as HTML
+  Rendering menu/index.html.erb within layouts/application
+  Rendered application/_landing.html.erb (0.7ms)
+  Rendered menu/index.html.erb within layouts/application (69.0ms)
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/application/_nav.html.erb:16
+  Rendered application/_nav.html.erb (18.5ms)
+Completed 200 OK in 2881ms (Views: 2846.7ms | ActiveRecord: 2.8ms)
+
+
