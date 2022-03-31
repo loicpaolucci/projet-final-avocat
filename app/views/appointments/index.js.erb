@@ -1,2 +1,2 @@
-if (document.getElementsByClassName("disponible-list")) {document.getElementsByClassName("disponible-list")[0].remove()}
 document.getElementsByClassName("appointment-list")[0].insertAdjacentHTML("beforeend", "<%= j render 'take_rdv_list', appointments: @appointments %>")
+document.getElementById("rdv-btn").remove()

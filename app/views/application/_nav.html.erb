@@ -1,11 +1,11 @@
-<nav class="navbar navbar-dark bg-dark fixed-top">
+<nav class="navbar navbar-light bg fixed-top">
     <%= image_tag "red_logo.png", class: "CLASSEIMAGE" %>
     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
         <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">My Lawyer</h5>
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">MyLawyer</h5>
             <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
@@ -13,10 +13,16 @@
                 <li class="nav-item">
                     <a class="nav-link text-dark active" aria-current="page" href="/">Page principale</a>
                 </li>
-                <li class="nav-item" >
-                    <%= link_to "Prendre rendez-vous", new_menu_path, class: "nav-link text-dark active"%>
-                </li>
                 <% if user_signed_in? %>
+                    <% if current_user.is_lawyer %>
+                    <li class="nav-item" >
+                        <%= link_to "Cabinet", firm_path(current_user.firm_id), class: "nav-link text-dark active"%>
+                    </li>
+                    <% else %>
+                    <li class="nav-item" >
+                        <%= link_to "Prendre rendez-vous", new_menu_path, class: "nav-link text-dark active"%>
+                    </li>
+                    <% end %>
                     <li class="nav-item">
                         <%= link_to "Profil", profil_path(current_user.id), class: "nav-link text-dark active" %>
                     </li>
@@ -32,9 +38,9 @@
                     </li>
                 <% end %>
             </ul>
-            <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Un département" aria-label="Search">
-                <button class= "btn btn-sm btn-danger" type="submit">Rechercher</button>
+            <form class="d-flex" action="/firms" method="get" >
+                <input class="form-control me-2" type="text" name="zip_code" id="zip_code" placeholder="Numéro de département " >
+                <button class="btn btn-outline-danger" type="submit">Rechercher</button>
             </form>
         </div>
     </div>

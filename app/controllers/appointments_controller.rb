@@ -22,6 +22,12 @@ class AppointmentsController < ApplicationController
     def update
         @appointment = Appointment.find(params[:id].to_i)
         @appointment.update(is_confirmed: !@appointment.is_confirmed)
+        if @appointment.client_id == nil 
+            @appointment.update(client_id: current_user.id)
+        else 
+            @appointment.update(client_id: nil)
+        end
+            UserMailer.rdv_email(current_user, @appointment).deliver_now
         redirect_to profil_path(current_user.id)
     end
 
