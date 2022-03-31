@@ -29206,3 +29206,143 @@ Processing by ProfilController#show as HTML
 Completed 200 OK in 81ms (Views: 49.0ms | ActiveRecord: 2.1ms)
 
 
+Started GET "/firms/1315" for 127.0.0.1 at 2022-03-30 20:05:11 +0200
+Processing by FirmsController#show as HTML
+  Parameters: {"id"=>"1315"}
+  [1m[36mFirm Load (32.6ms)[0m  [1m[34mSELECT  "firms".* FROM "firms" WHERE "firms"."id" = $1 LIMIT $2[0m  [["id", 1315], ["LIMIT", 1]]
+  ↳ app/controllers/firms_controller.rb:15
+  [1m[36mLawTypesByFirm Load (99.1ms)[0m  [1m[34mSELECT  "law_types_by_firms".* FROM "law_types_by_firms" WHERE "law_types_by_firms"."firm_id" = $1 LIMIT $2[0m  [["firm_id", 1315], ["LIMIT", 1]]
+  ↳ app/controllers/firms_controller.rb:16
+  Rendering firms/show.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/application/_show_firm.html.erb:2
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/application/_show_firm.html.erb:44
+  [1m[36mFirm Load (0.3ms)[0m  [1m[34mSELECT  "firms".* FROM "firms" WHERE "firms"."id" = $1 LIMIT $2[0m  [["id", 1315], ["LIMIT", 1]]
+  ↳ app/views/application/_show_firm.html.erb:52
+  [1m[36mCACHE Firm Load (0.0ms)[0m  [1m[34mSELECT  "firms".* FROM "firms" WHERE "firms"."id" = $1 LIMIT $2[0m  [["id", 1315], ["LIMIT", 1]]
+  ↳ app/views/application/_show_firm.html.erb:52
+  Rendered application/_show_firm.html.erb (41.5ms)
+  Rendered firms/show.html.erb within layouts/application (42.9ms)
+  Rendered application/_nav.html.erb (2.5ms)
+Completed 200 OK in 281ms (Views: 87.7ms | ActiveRecord: 136.6ms)
+
+
+Started GET "/firms/1315" for 127.0.0.1 at 2022-03-30 20:05:52 +0200
+Processing by FirmsController#show as HTML
+  Parameters: {"id"=>"1315"}
+  [1m[36mFirm Load (1.2ms)[0m  [1m[34mSELECT  "firms".* FROM "firms" WHERE "firms"."id" = $1 LIMIT $2[0m  [["id", 1315], ["LIMIT", 1]]
+  ↳ app/controllers/firms_controller.rb:15
+  [1m[36mLawTypesByFirm Load (0.5ms)[0m  [1m[34mSELECT  "law_types_by_firms".* FROM "law_types_by_firms" WHERE "law_types_by_firms"."firm_id" = $1 LIMIT $2[0m  [["firm_id", 1315], ["LIMIT", 1]]
+  ↳ app/controllers/firms_controller.rb:16
+  Rendering firms/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/application/_show_firm.html.erb:2
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/application/_show_firm.html.erb:44
+  [1m[36mFirm Load (0.5ms)[0m  [1m[34mSELECT  "firms".* FROM "firms" WHERE "firms"."id" = $1 LIMIT $2[0m  [["id", 1315], ["LIMIT", 1]]
+  ↳ app/views/application/_show_firm.html.erb:52
+  Rendered application/_show_firm.html.erb (12.9ms)
+  Rendered firms/show.html.erb within layouts/application (14.4ms)
+  Rendered application/_nav.html.erb (2.7ms)
+Completed 200 OK in 68ms (Views: 60.2ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/firms/1315" for 127.0.0.1 at 2022-03-30 20:06:06 +0200
+Processing by FirmsController#show as HTML
+  Parameters: {"id"=>"1315"}
+  [1m[36mFirm Load (0.5ms)[0m  [1m[34mSELECT  "firms".* FROM "firms" WHERE "firms"."id" = $1 LIMIT $2[0m  [["id", 1315], ["LIMIT", 1]]
+  ↳ app/controllers/firms_controller.rb:15
+  [1m[36mLawTypesByFirm Load (0.7ms)[0m  [1m[34mSELECT  "law_types_by_firms".* FROM "law_types_by_firms" WHERE "law_types_by_firms"."firm_id" = $1 LIMIT $2[0m  [["firm_id", 1315], ["LIMIT", 1]]
+  ↳ app/controllers/firms_controller.rb:16
+  Rendering firms/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/application/_show_firm.html.erb:2
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/application/_show_firm.html.erb:44
+  [1m[36mFirm Load (0.5ms)[0m  [1m[34mSELECT  "firms".* FROM "firms" WHERE "firms"."id" = $1 LIMIT $2[0m  [["id", 1315], ["LIMIT", 1]]
+  ↳ app/views/application/_show_firm.html.erb:52
+  Rendered application/_show_firm.html.erb (10.1ms)
+  Rendered firms/show.html.erb within layouts/application (11.7ms)
+  Rendered application/_nav.html.erb (1.6ms)
+Completed 200 OK in 63ms (Views: 54.7ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-31 10:41:53 +0200
+  
+PG::ConnectionBad (connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: No such file or directory
+	Is the server running locally and accepting connections on that socket?
+):
+  
+pg (1.3.4) lib/pg/connection.rb:702:in `connect_start'
+pg (1.3.4) lib/pg/connection.rb:702:in `new'
+pg (1.3.4) lib/pg.rb:69:in `connect'
+activerecord (5.2.7) lib/active_record/connection_adapters/postgresql_adapter.rb:692:in `connect'
+activerecord (5.2.7) lib/active_record/connection_adapters/postgresql_adapter.rb:223:in `initialize'
+activerecord (5.2.7) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `new'
+activerecord (5.2.7) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `postgresql_connection'
+activerecord (5.2.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:830:in `new_connection'
+activerecord (5.2.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:874:in `checkout_new_connection'
+activerecord (5.2.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:853:in `try_to_checkout_new_connection'
+activerecord (5.2.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:814:in `acquire_connection'
+activerecord (5.2.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:538:in `checkout'
+activerecord (5.2.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:382:in `connection'
+activerecord (5.2.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:1033:in `retrieve_connection'
+activerecord (5.2.7) lib/active_record/connection_handling.rb:118:in `retrieve_connection'
+activerecord (5.2.7) lib/active_record/connection_handling.rb:90:in `connection'
+activerecord (5.2.7) lib/active_record/migration.rb:554:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.7) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.7) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.7) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.7) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2022-03-31 10:42:23 +0200
+  [1m[35m (29.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/odin/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+Processing by MenuController#index as HTML
+  Rendering menu/index.html.erb within layouts/application
+  Rendered application/_landing.html.erb (0.5ms)
+  Rendered menu/index.html.erb within layouts/application (22.7ms)
+  [1m[36mUser Load (49.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/application/_nav.html.erb:16
+  Rendered application/_nav.html.erb (148.6ms)
+Completed 200 OK in 1478ms (Views: 1355.1ms | ActiveRecord: 91.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-31 10:43:03 +0200
+Processing by MenuController#index as HTML
+  Rendering menu/index.html.erb within layouts/application
+  Rendered application/_landing.html.erb (0.8ms)
+  Rendered menu/index.html.erb within layouts/application (2.7ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/application/_nav.html.erb:16
+  Rendered application/_nav.html.erb (5.4ms)
+Completed 200 OK in 75ms (Views: 73.4ms | ActiveRecord: 0.7ms)
+
+

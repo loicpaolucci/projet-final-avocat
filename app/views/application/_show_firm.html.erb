@@ -43,13 +43,13 @@
         <h3><b>Avocats</b></h3>
         <% @lawyers.each do |lawyer| %>
           <% if lawyer.is_lawyer && lawyer.firm_id == params[:id].to_i %>
-            <p><%= lawyer.first_name %> <%= lawyer.last_name %></p>
+            <p class="text-dark"><%= lawyer.first_name %> <%= lawyer.last_name %></p>
           <% end %>
         <% end %>
       </div>
       <div class="col-lg-8 col-sm-12">
         <div class="my-rating">
-          <h1><b><%= Firm.find(params[:id].to_i).name %>.</b> <small><%= Firm.find(params[:id].to_i).rating %> Votes</small></h1>
+          <h1><b><%= Firm.find(params[:id].to_i).name %>.</b></h1>
         </div>
       </div>
     </div>
