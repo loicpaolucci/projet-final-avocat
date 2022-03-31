@@ -22,7 +22,7 @@
 
       <div class="form-actions">
         <br>
-        <%= f.button :submit, "S'enregister", class: "btn btn-sm btn-danger" %>
+        <%= f.button :submit, "S'enregister", class: "btn btn-sm6 btn-danger" %>
       </div><br>
     <% end %>
 
@@ -149,8 +149,10 @@
         <%= form.text_field :phone_number, placeholder: "+33xxxxxxxxx", required: true,  class: "my-lawyer-input" %><br><br>
       </div>
       <div>
-        <%= form.submit "S'enregistrer", class: "btn btn-sm btn-danger"%>
-      </div>
+        <%= form.submit "S'enregistrer", class: "btn btn-sm6 btn-danger"%>
+      </div><br>
+
+      <%= render "devise/shared/links" %><br>
     <% end %>
     </div>
   </div>

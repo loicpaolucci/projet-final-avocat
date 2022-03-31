@@ -3,9 +3,9 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    position: relative;
-    background-image: url(https://us.123rf.com/450wm/belchonock/belchonock1603/belchonock160301866/54510587-voler-livres-ouverts-dans-la-bibliothèque.jpg?ver=6);
-
+    position: relative;    
+    font-family: 'Playfair Display SC', serif;
+    font-size: 20px;
 }
 .modal-body{
 

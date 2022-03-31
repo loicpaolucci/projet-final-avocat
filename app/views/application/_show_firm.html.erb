@@ -19,7 +19,7 @@
       </ul>
     </div>
     <div class="col-md-4 col-sm-6">
-      <%= link_to "Prendre un rendez-vous", firm_appointments_path(params[:id]), id: "rdv-btn", class: "btn btn-outline-danger red-btn", style:"color:black", remote: true %>
+      <%= link_to "Prendre un rendez-vous", firm_appointments_path(params[:id]), id: "rdv-btn", class:"btn btn-sm6 btn-danger", remote: true %>
       <div class="appointment-list">
       </div>
     </div>
@@ -27,7 +27,7 @@
   <% else %>
     <div class="row my-row container">
       <div class="col-lg-2 col-sm-12">
-        <div class="add-lawyer btn btn-sm btn-outline-dark" style="margin-bottom : 10px;" >+ Ajouter un avocat</div>
+        <div class="add-lawyer btn btn btn-sm6 btn-danger" style="margin-bottom : 10px;" >+ Ajouter un avocat</div>
         <div class="input-group collapse" id="new-lawyer" >
           <%= form_with url: firm_lawyers_path(params[:id]), method: :post do |form| %>
             <%= form.text_field :first_name, placeholder: "First name", class: "form-control" %><br>
@@ -35,7 +35,7 @@
             <%= form.telephone_field :phone_number, placeholder: "Phone number", class: "form-control" %><br>
             <%= form.email_field :email, placeholder: "Email", class: "form-control" %><br>
             <%= form.password_field :password, placeholder: "Mot de passe", class: "form-control" %><br>
-            <%= form.submit "Enregistrer", class: "btn btn-outline-dark" %>
+            <%= form.submit "Enregistrer", class:"btn btn-sm6 btn-danger" %>
           <% end %>
         </div>
       </div>
@@ -43,13 +43,13 @@
         <h3><b>Avocats</b></h3>
         <% @lawyers.each do |lawyer| %>
           <% if lawyer.is_lawyer && lawyer.firm_id == params[:id].to_i %>
-            <p><%= lawyer.first_name %> <%= lawyer.last_name %></p>
+            <p class="text-dark"><%= lawyer.first_name %> <%= lawyer.last_name %></p>
           <% end %>
         <% end %>
       </div>
       <div class="col-lg-8 col-sm-12">
         <div class="my-rating">
-          <h1><b><%= Firm.find(params[:id].to_i).name %>.</b> <small><%= Firm.find(params[:id].to_i).rating %> Votes</small></h1>
+          <h1><b><%= Firm.find(params[:id].to_i).name %>.</b></h1>
         </div>
       </div>
     </div>
