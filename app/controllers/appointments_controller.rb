@@ -27,7 +27,6 @@ class AppointmentsController < ApplicationController
         else 
             @appointment.update(client_id: nil)
         end
-            UserMailer.rdv_email(current_user, @appointment).deliver_now
         redirect_to profil_path(current_user.id)
     end
 
