@@ -111,13 +111,13 @@
             <div class="card text-center">
                 <div class="card-body">
                     <h5 class="card-title"><%= firm.name %></h5>
-                    <p class="card-text">Pour nous contacter : par téléphone <%= firm.email %> ou par email :  <%= firm.phone_number %></p>
+                    <p class="card-text text-dark">Pour nous contacter : par email <%= firm.email %><br>ou par téléphone :  <%= firm.phone_number %></p>
                     <% if user_signed_in? %>
                         <a href="<%= firm_path(firm.id)%>" class="btn btn-sm btn-danger">Voir le cabinet</a>
                     <% end %>
                 </div>
                 <div class="card-footer text-muted">
-                    <%= firm.rating %> votes
+                    <%= firm.address %>
                 </div>
             </div>
         <% end %>
