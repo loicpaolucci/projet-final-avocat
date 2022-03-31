@@ -7,7 +7,7 @@ MyLawyer est un site qui permet de trouver un avocat et prendre un rendez-vous p
 
 ## WEB version 🌐
 
-Le site Heroku est ici 👉 [MyLawyer](https://mylawyer.herokuapp.com/)
+Le site Heroku est ici 👉 [MyLawyer](https://my-lawyer-thp.herokuapp.com/)
 
 ## Installation ⚙️
 

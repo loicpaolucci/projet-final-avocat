@@ -29368,3 +29368,25 @@ Processing by MenuController#index as HTML
 Completed 200 OK in 1110ms (Views: 1108.1ms | ActiveRecord: 1.1ms)
 
 
+Started GET "/" for 127.0.0.1 at 2022-03-31 12:17:55 +0200
+Processing by MenuController#index as HTML
+  Rendering menu/index.html.erb within layouts/application
+  Rendered application/_landing.html.erb (11.0ms)
+  Rendered menu/index.html.erb within layouts/application (12.8ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/application/_nav.html.erb:16
+  Rendered application/_nav.html.erb (16.3ms)
+Completed 200 OK in 757ms (Views: 755.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-31 12:18:53 +0200
+Processing by MenuController#index as HTML
+  Rendering menu/index.html.erb within layouts/application
+  Rendered application/_landing.html.erb (0.5ms)
+  Rendered menu/index.html.erb within layouts/application (3.7ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/application/_nav.html.erb:16
+  Rendered application/_nav.html.erb (8.0ms)
+Completed 200 OK in 333ms (Views: 331.4ms | ActiveRecord: 0.7ms)
+
+
