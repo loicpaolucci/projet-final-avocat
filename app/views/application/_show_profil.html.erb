@@ -8,7 +8,7 @@
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title" id="exampleModalLabel">Mes rendez-vous</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" ></button>
           </div>
           <div class="modal-body">
             <% @current_appointments.each do |appointment|%>
@@ -16,7 +16,7 @@
             <% end %>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-sm6 btn-danger" data-bs-dismiss="modal">Close</button>
           </div>
         </div>
       </div>
@@ -29,8 +29,8 @@
         <h1>Mes rendez-vous</h1>
         <% @current_appointments.each do |appointment| %>
           Rendez-vous prévu le <%= appointment.start_date.day %> <%= Date::MONTHNAMES[appointment.start_date.month] %> à <%= appointment.start_date.hour %>h
-          <%= link_to "Annuler" , firm_appointment_path(appointment.id), method: :delete, class: "btn btn-sm btn-outline-warning text-muted" %>
           <p><% if appointment.is_confirmed %>Confirmé<% else %>Disponible<% end %></p>
+          <%= link_to "Annuler" , firm_appointment_path(appointment.id), method: :delete, class: "btn btn-sm6 btn-danger"%>
         <% end %>
     </div>
     <div class="col-lg-5 col-sm-12">
@@ -38,7 +38,7 @@
       <%= form_with url: firm_appointments_path(current_user.firm_id), method: :post do |form| %>
         <%= form.date_field :date, class: "form-control" %><br>
         <%= form.time_field :time, :format=>"%H:%M", class: "form-control" %><br>
-        <%= form.submit "Ajouter un rendez-vous", class: "btn btn-outline-danger" %><br>
+        <%= form.submit "Ajouter un rendez-vous", class: "btn btn-sm6 btn-danger" %><br>
       <% end %>
     </div>
   </div>
