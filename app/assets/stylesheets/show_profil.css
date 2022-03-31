@@ -3,9 +3,9 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    position: relative;    
-    font-family: 'Playfair Display SC', serif;
-    font-size: 20px;
+    position: relative;
+    background-image: url(https://static.vecteezy.com/ti/vecteur-libre/p1/2120602-calendrier-rendez-vous-entreprise-date-importante-travail-projet-plan-ou-rappel-concept-vectoriel.jpg);
+
 }
 .modal-body{
 
