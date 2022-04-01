@@ -27,9 +27,7 @@ class FirmsController < ApplicationController
             session[:new_firm] = @firm.id
             redirect_to "/firm/#{@firm.id}"
         else
-            flash.now[:error] = "OUH LÀ GROS PROBLÈME DANS L'INSCRIPTION"
-            puts "60"*50
-            puts @firm.errors.messages
+            flash.now[:error] = @firm.errors.messages
             render new_registration_path
         end
     end

@@ -7,9 +7,7 @@ class LawyersController < ApplicationController
                 format.html { redirect_to "/firms/#{params[:firm_id]}"}
             end
         else
-            puts "="*70
-            @lawyer.errors.messages
-            puts "="*70
+            @errors = @lawyer.errors.messages
         end
     end
 
