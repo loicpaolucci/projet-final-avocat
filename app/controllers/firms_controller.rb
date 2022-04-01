@@ -25,7 +25,7 @@ class FirmsController < ApplicationController
         @firm = Firm.new(post_params)
         if @firm.save
             session[:new_firm] = @firm.id
-            redirect_to firm_path(@firm.id)
+            redirect_to "/firm/#{@firm.id}"
         else
             flash.now[:error] = "OUH LÀ GROS PROBLÈME DANS L'INSCRIPTION"
             puts "60"*50

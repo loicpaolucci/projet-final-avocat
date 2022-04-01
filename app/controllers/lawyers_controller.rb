@@ -4,6 +4,7 @@ class LawyersController < ApplicationController
         if @lawyer.save
             respond_to do |format|
                 format.js { }
+                format.html { redirect_to "/firms/#{params[:firm_id]}"}
             end
         else
             puts "="*70
