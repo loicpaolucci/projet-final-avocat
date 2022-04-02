@@ -1,2 +1,3 @@
-document.getElementsByClassName("appointment-list")[0].remove()
-document.getElementById("change-zone").insertAdjacentHTML("beforeend", "<p>Vos rendez-vous sont disponibles à partir de votre profil</p>")
+if (document.getElementsByClassName("appointment-list")[0]){
+    document.getElementsByClassName("appointment-list")[0].remove()
+    document.getElementById("change-zone").insertAdjacentHTML("beforeend", "<p>Vos rendez-vous sont disponibles à partir de votre profil</p>")}

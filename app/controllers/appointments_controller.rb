@@ -28,6 +28,7 @@ class AppointmentsController < ApplicationController
             @appointment.update(client_id: nil)
         end
         respond_to do |format|
+            format.html { redirect_to profil_path(current_user.id) }
             format.js { }
         end
     end
