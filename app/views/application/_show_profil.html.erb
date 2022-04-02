@@ -12,7 +12,7 @@
           </div>
           <div class="modal-body">
             <% @current_appointments.each do |appointment|%>
-              Rendez-vous prévu le <%= appointment.start_date.day %> <%= Date::MONTHNAMES[appointment.start_date.month] %> à <%= appointment.start_date.hour %>h , avec le cabinet <%= link_to "#{Firm.find(appointment.firm_id).name}" , firms_path , style: "color:black"%> 
+              Rendez-vous prévu le <%= appointment.start_date.day %> <%= Date::MONTHNAMES[appointment.start_date.month] %> à <%= appointment.start_date.hour %>h , avec le cabinet <%= Firm.find(appointment.firm_id).name %> 
               <%= link_to "Annuler" , firm_appointment_path(appointment.firm_id, appointment.id), method: :put, class: "btn btn-sm btn-outline-danger text-dark" %><br>
             <% end %>
           </div>
