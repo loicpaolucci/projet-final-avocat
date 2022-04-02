@@ -27,7 +27,9 @@ class AppointmentsController < ApplicationController
         else 
             @appointment.update(client_id: nil)
         end
-        redirect_to profil_path(current_user.id)
+        respond_to do |format|
+            format.js { }
+        end
     end
 
     private

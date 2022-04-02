@@ -18,7 +18,7 @@
         <li class="<%= @law_types.judiciaire ? "red-nav-link" : "collapse" %>">judiciaire</li>
       </ul>
     </div>
-    <div class="col-md-4 col-sm-6">
+    <div class="col-md-4 col-sm-6" id="change-zone">
       <%= link_to "Prendre un rendez-vous", firm_appointments_path(params[:id]), id: "rdv-btn", class:"btn btn-sm6 btn-danger", remote: true %>
       <div class="appointment-list">
       </div>
@@ -56,7 +56,9 @@
   <% end %>
 </body>
 <script>
-  document.getElementsByClassName("add-lawyer")[0].addEventListener("click", function(){
-    document.getElementById("new-lawyer").classList.toggle("collapse")
-  })
+  if (document.getElementsByClassName("add-lawyer")[0]) {
+    document.getElementsByClassName("add-lawyer")[0].addEventListener("click", function(){
+      document.getElementById("new-lawyer").classList.toggle("collapse")
+    })
+  }
 </script>
